@@ -8,6 +8,6 @@ class User < ApplicationRecord
   has_many :goals
   has_many :transactions, through: :categories
 
-  validates :first_name, presence: true
-  validates :date_of_birth, presence: true
+#  validates :first_name, presence: true
+#  validates :date_of_birth, presence: true
 end
