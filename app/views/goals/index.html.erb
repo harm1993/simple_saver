@@ -1,3 +1,13 @@
 <h1>All goals</h1>
 
 <%= link_to "create new goal", new_goal_path %>
+
+<hr>
+
+<ul>
+  <% @goals.each do |goal| %>
+    <%= link_to(goal_path(goal)) do %>
+      <li> <%= goal.name %> </li>
+    <% end %>
+  <% end %>
+</ul>

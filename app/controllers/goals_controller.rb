@@ -1,6 +1,6 @@
 class GoalsController < ApplicationController
   def index
-    @goals = Goal.all
+    @goals = current_user.goals
   end
 
   def show
@@ -40,7 +40,6 @@ class GoalsController < ApplicationController
   def destroy
     @goal = Goal.find(params[:id])
     @goal.destroy
-    redirect_to goals_path
   end
 
   private
