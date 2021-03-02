@@ -12,7 +12,7 @@ class CategoriesController < ApplicationController
     @category = Category.new(category_params)
     @category.user = @user
     if @category.save
-      redirect_to home_path
+      redirect_to root_path
     else
       render :new
     end
