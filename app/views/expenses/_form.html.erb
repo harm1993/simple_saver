@@ -1,0 +1,9 @@
+<%= form_for([@category, @expense]) do |f| %>
+  <%= f.label :amount %>
+  <%= f.text_field :amount %>
+  <%= f.label :place %>
+  <%= f.text_field :place %>
+  <%= f.label :date %>
+  <%= f.date_select :date %>
+  <%= f.submit %>
+<% end %>

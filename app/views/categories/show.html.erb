@@ -6,5 +6,6 @@
 <%= link_to "Update category", edit_category_path(@category), class: "s-button" %>
 <%= link_to "Delete category", category_path(@category), method: :delete, class: "s-button" %>
 
-<%= render '/expenses/index' %>
+<%= link_to "Add an expense",  new_category_expense_path(@category), class: "s-button" %>
 
+<%= render '/expenses/index' %>

@@ -1,6 +1,7 @@
 class CategoriesController < ApplicationController
   def show
     @category = Category.find(params[:id])
+    @expenses = @category.expenses
   end
 
   def new
