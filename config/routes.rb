@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   end
   resources :expenses, only: [ :edit, :destroy ]
   resources :goals, only: [ :show, :new, :create, :edit, :update, :destroy ]
+
+  get '/introduction', to: 'pages#intro'
 end
