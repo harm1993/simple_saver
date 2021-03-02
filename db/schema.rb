@@ -10,10 +10,41 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_01_162402) do
+ActiveRecord::Schema.define(version: 2021_03_02_102808) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.integer "goal_per_month"
+    t.float "spend_per_month", default: 0.0
+    t.boolean "active", default: true
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_categories_on_user_id"
+  end
+
+  create_table "expenses", force: :cascade do |t|
+    t.float "amount"
+    t.string "place"
+    t.date "date"
+    t.bigint "category_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["category_id"], name: "index_expenses_on_category_id"
+  end
+
+  create_table "goals", force: :cascade do |t|
+    t.float "balance", default: 0.0
+    t.string "name"
+    t.boolean "completed", default: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_goals_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -31,4 +62,7 @@ ActiveRecord::Schema.define(version: 2021_03_01_162402) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "categories", "users"
+  add_foreign_key "expenses", "categories"
+  add_foreign_key "goals", "users"
 end
