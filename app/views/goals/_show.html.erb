@@ -2,5 +2,5 @@
 
 <%= @goals.name %>
 
-<%= link_to "delete goal", goals_path(@goal), method: :delete %>
-<%= link_to "All goals", goals_path %>
+<%= link_to "Delete goal", goals_path(@goal), method: :delete  class: "s-button"%>
+<%= link_to "All goals", goals_path,  class: "s-button" %>
