@@ -10,3 +10,13 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+h2 {
+  color: $s-orange;
+}
+
+.navbar {
+  height: 60px;
+  box-shadow: 0 0 10px grey;
+  border-radius: 0 0 5px 5px;
+}

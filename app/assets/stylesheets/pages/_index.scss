@@ -1,2 +1,22 @@
 // Import page-specific CSS files here.
 @import "home";
+
+* {
+  font-family: $s-font;
+}
+
+h2 {
+  font-family: $s-font;
+}
+
+// star doesnt work on h1 and h2, why? check later
+h1 {
+  font-family: $s-font;
+}
+
+
+#body-content {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
