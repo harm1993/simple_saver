@@ -6,8 +6,7 @@ Rails.application.routes.draw do
     resources :expenses, only: [ :index, :new, :create ]
   end
   resources :expenses, only: [ :edit, :destroy ]
-  resources :goals, only: [ :show, :new, :create, :edit, :update, :destroy ]
-
+  resources :goals
   get '/introduction', to: 'pages#intro'
 end
 
