@@ -3,6 +3,10 @@ class GoalsController < ApplicationController
     @goals = Goal.all
   end
 
+  def show
+    @goal = Goal.find(params[:id])
+  end
+
   # create
 
   def new
@@ -36,11 +40,12 @@ class GoalsController < ApplicationController
   def destroy
     @goal = Goal.find(params[:id])
     @goal.destroy
+    redirect_to goals_path
   end
 
   private
 
   def goal_params
-    params.require(:goal).permit(:name, :balance, :completed)
+    params.require(:goal).permit(:name, :amount, :completed, :deadline)
   end
 end
