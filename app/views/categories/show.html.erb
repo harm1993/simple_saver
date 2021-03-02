@@ -2,3 +2,5 @@
 
 <h1> <%= @category.name %> </h1>
 <p> You've spent <%= @category.spend_per_month %> of the <%= @category.goal_per_month %>€. </p>
+
+<%= link_to "Update category", edit_category_path(@category) %>
