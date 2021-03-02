@@ -1,0 +1,4 @@
+<% @categories.each do |category| %>
+  <%= category.name %>
+  <%= category.spend_per_month / category.goal_per_month %>
+<% end %>
