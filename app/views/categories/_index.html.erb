@@ -1,6 +1,6 @@
 <% categories.each do |category| %>
   <h1><%= link_to category.name, category %></h1>
-  <p><%= category.spend_per_month %> / <%= category.goal_per_month %></p>
+  <p><%= category.tot_month %> / <%= category.goal_per_month %></p>
 <% end %>
 
 <%= link_to "Create category", new_category_path, class: "s-button" %>
