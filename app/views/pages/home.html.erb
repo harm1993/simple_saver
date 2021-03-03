@@ -1,2 +1,24 @@
-<%= render '/categories/index', categories: @categories %>
-<%= render '/goals/show', goals: @goals %>
+
+<div class="home-container">
+  <div class="top-container">
+    <%= link_to "add goal", new_goal_path, class: "button-home" %>
+    <div class="balance">
+      <h1>Balance</h1>
+      <h5>$90.000,00</h5>
+    </div>
+    <%= link_to "add category", new_category_path, class: "button-home" %>
+  </div>
+
+  <div class="dashboard-container">
+    <div class="goals-dashboard">
+      <h2>Savings progress</h2>
+      <%= render '/goals/show', goals: @goals %>
+    </div>
+
+    <div class="categories-dashboard">
+      <h2>Expense Categories</h2>
+      <%= render '/categories/index', categories: @categories %>
+    </div>
+  </div>
+</div>
+
