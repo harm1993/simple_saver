@@ -2,4 +2,5 @@
   <h3><%= expense.place %> - <%= expense.amount %></h3>
   <p>Done on <%= expense.date %></p>
   <%= link_to "Edit expense",  edit_expense_path(expense), class: "s-button" %>
+  <%= link_to "Delete expense",  expense_path(expense), method: :delete, class: "s-button" %>
 <% end %>

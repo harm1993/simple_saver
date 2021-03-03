@@ -13,7 +13,7 @@ class CategoriesController < ApplicationController
     @category = Category.new(category_params)
     @category.user = @user
     if @category.save
-      redirect_to root_path
+      redirect_to root_path, notice: 'Expense was successfully created!'
     else
       render :new
     end
@@ -26,13 +26,13 @@ class CategoriesController < ApplicationController
   def update
     @category = Category.find(params[:id])
     @category.update(category_params)
-    redirect_to root_path
+    redirect_to root_path, notice: 'Category was successfully updated!'
   end
 
   def destroy
     @category = Category.find(params[:id])
     @category.destroy
-    redirect_to root_path
+    redirect_to root_path, notice: 'Category was successfully deleted!'
   end
 
   private
