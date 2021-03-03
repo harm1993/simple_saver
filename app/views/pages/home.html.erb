@@ -17,7 +17,11 @@
 
     <div class="categories-dashboard">
       <h2>Expense Categories</h2>
-      <%= render '/categories/index', categories: @categories %>
+      <% if current_user.categories.count > 0 %>
+        <%= render '/categories/index', categories: @categories %>
+      <% else %>
+        <%= render '/categories/newcall' %>
+      <% end %>
     </div>
   </div>
 </div>
