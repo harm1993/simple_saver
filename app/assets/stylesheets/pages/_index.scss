@@ -13,10 +13,3 @@ h2 {
 h1 {
   font-family: $s-font;
 }
-
-
-#body-content {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  min-height: 100vh;
-}

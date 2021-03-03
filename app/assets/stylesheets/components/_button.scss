@@ -15,6 +15,20 @@
   font-size: 13px;
 }
 
+.button-home {
+  color: white;
+  background-color: $s-blue;
+  padding: 5px 20px;
+  min-width: 150px;
+  text-align: center;
+  border-radius: 15px;
+}
+
+.button-home:hover {
+  text-decoration: none;
+  color: white;
+}
+
 .s-button:hover {
   background: linear-gradient($s-blue,#148EFF);
   color: white;
