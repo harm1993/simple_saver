@@ -8,4 +8,8 @@ class Category < ApplicationRecord
   def tot_month(month = Date.today.month)
     self.expenses.where("EXTRACT(MONTH FROM created_at) = ?", month).sum(:amount)
   end
+
+  def spent_percentage
+    self.tot_month /  self.goal_per_month
+  end
 end

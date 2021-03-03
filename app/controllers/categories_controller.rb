@@ -13,7 +13,7 @@ class CategoriesController < ApplicationController
     @category = Category.new(category_params)
     @category.user = @user
     if @category.save
-      redirect_to root_path, notice: 'Expense was successfully created!'
+      redirect_to root_path, notice: 'Category was successfully created!'
     else
       render :new
     end
