@@ -1,0 +1,54 @@
+.landing_page_container {
+    * {
+        outline: 1px dotted red;
+    }
+    width: 100vw;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    max-height: 100vh;
+}
+
+.next-slide {
+    text-align: center;
+}
+
+.slide_container {
+    width: 100vw;
+    height: 92vh;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header {
+        font-size: 65px
+}
+.container-steps {
+    width: 700px;
+    height: 61vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    h2 {
+        font-size: 65px;
+    }
+    img {
+        margin-right: 30px;
+        margin-bottom: 15px;
+    }
+}
+
+.header {
+    display: flex;
+    text-align: center;
+    img {
+        margin-left: 20px;
+    }
+}
+
+.header_part_2 {
+    width: 407px;
+    text-align: center;
+}
