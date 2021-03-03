@@ -8,6 +8,14 @@ class User < ApplicationRecord
   has_many :goals
   has_many :transactions, through: :categories
 
+  def current_goal
+    goals.find_by(completed: false)
+  end
+
+  def completed_goals
+    goals.where(completed: true)
+  end
+
 #  validates :first_name, presence: true
 #  validates :date_of_birth, presence: true
 end

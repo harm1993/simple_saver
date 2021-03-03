@@ -4,7 +4,7 @@ class PagesController < ApplicationController
   def home
     if user_signed_in?
       @categories = current_user.categories
-      @goals = current_user.goals
+      @current_goal = current_user.current_goal
     else
       redirect_to introduction_path
     end

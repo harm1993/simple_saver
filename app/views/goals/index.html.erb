@@ -4,10 +4,26 @@
 
 <hr>
 
+
+<h3>Current goals</h3>
 <ul>
-  <% @goals.each do |goal| %>
-    <%= link_to(goal_path(goal)) do %>
-      <li> <%= goal.name %> </li>
-    <% end %>
+      <%= link_to(goal_path(@current_goals)) do %>
+        <li>
+          <%= @current_goals.name %>
+      <% end %>
+          | <%= @current_goals.amount %>
+         </li>
+</ul>
+
+<h3>Completed goals</h3>
+<ul>
+  <% @completed_goals.each do |goal| %>
+
+    <li>
+      <%= link_to(goal_path(goal)) do %>
+        <%= goal.name %>
+      <% end %>
+        | <%= goal.amount %>
+    </li>
   <% end %>
 </ul>
