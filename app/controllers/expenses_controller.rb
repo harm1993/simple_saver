@@ -1,4 +1,6 @@
 class ExpensesController < ApplicationController
+  before_action :set_expense, only: [:edit, :destroy]
+
   def index
     @category = current_user.categories.find(params[:id])
     @expenses = @category.expenses
@@ -20,7 +22,21 @@ class ExpensesController < ApplicationController
     end
   end
 
+  def edit
+    @expense = Expense.find(params[:id])
+  end
+
+  def update
+    @expense = Expense.find(params[:id])
+    @expense.update(expense_params)
+    redirect_to category_path(@expense.category)
+  end
+
   private
+
+  def set_expense
+    @expense = Expense.find(params[:id])
+  end
 
   def expense_params
     params.require(:expense).permit(:amount, :place, :date)
