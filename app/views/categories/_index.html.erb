@@ -2,7 +2,7 @@
   <h1><%= link_to category.name, category %></h1>
   <p><%= category.tot_month %> / <%= category.goal_per_month %></p>
 
-  <div class="progress-bar" data-type="line" data-percentage="<%= category.spent_percentage %>"></div>
+  <div class="state-bar" data-type="line" data-percentage="<%= category.spent_percentage %>"></div>
 <% end %>
 
 <%= link_to "Create category", new_category_path, class: "s-button" %>
