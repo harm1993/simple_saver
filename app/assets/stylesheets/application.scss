@@ -11,3 +11,14 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+
+#body-content {
+  min-height: 100vh;
+  margin-bottom: -60px;
+}
+
+body {
+  background-color: white;
+}
+

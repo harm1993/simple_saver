@@ -13,10 +13,12 @@
 
 h2 {
   color: $s-orange;
+  font-weight: bold;
 }
 
 .navbar {
-  height: 60px;
-  box-shadow: 0 0 10px grey;
+  height: 70px;
+  padding: 0 5%;
   border-radius: 0 0 5px 5px;
+  border-bottom: 0.1px solid lightgrey;
 }
