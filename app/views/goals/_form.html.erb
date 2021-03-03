@@ -1,9 +1,8 @@
-<%= form_for(goal) do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.label :amount %>
-  <%= f.text_field :amount %>
-  <%= f.label :deadline %>
-  <%= f.date_select :deadline %>
-  <%= f.submit class: "s-button"%>
-<% end %>
+<div class="form-container">
+  <%= simple_form_for(goal) do |f| %>
+    <%= f.input :name, label: 'What are you saving for?' %>
+    <%= f.input :amount, label: 'How much do you want to save?' %>
+    <%= f.input :deadline, label: 'When do you want to reach this goal?' %>
+    <%= f.submit class: "s-button"%>
+  <% end %>
+</div>

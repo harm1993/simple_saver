@@ -1,9 +1,10 @@
-<%= form_for([@category, @expense]) do |f| %>
-  <%= f.label :amount %>
-  <%= f.text_field :amount %>
-  <%= f.label :place %>
-  <%= f.text_field :place %>
-  <%= f.label :date %>
-  <%= f.date_select :date %>
-  <%= f.submit %>
-<% end %>
+<div class="form-container">
+  <%= simple_form_for([@category, @expense]) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :amount %>
+    <%= f.input :place %>
+    <%= f.input :date %>
+    <%= f.submit class: "s-button"%>
+  <% end %>
+</div>
+
