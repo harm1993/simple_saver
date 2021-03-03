@@ -13,11 +13,13 @@
 
   <body>
     <div id="body-content">
-    <%= render 'shared/navbar' %>
-    <%= render 'shared/flashes' %>
-    <%= yield %>
-    </div>
-    <%= render 'shared/footer' %>
+      <%= render 'shared/navbar' %>
+      <%= render 'shared/flashes' %>
+      <main id="main-content">
+      <%= yield %>
+      </main>
+      <%= render 'shared/footer' %>
+     </div>
   </body>
 
 </html>

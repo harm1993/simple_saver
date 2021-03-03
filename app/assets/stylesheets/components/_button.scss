@@ -1,8 +1,8 @@
 .s-button {
   color: white;
   background-color: $s-blue;
-  padding: 5px;
-  border-radius: 15px;
+  padding: 7px;
+  border-radius: 6px;
   font-weight: bold;
   border: 1px solid $s-blue;
   text-decoration: none;
@@ -12,6 +12,7 @@
   min-width: 120px;
   text-align: center;
   vertical-align: middle;
+  font-size: 13px;
 }
 
 .button-home {
