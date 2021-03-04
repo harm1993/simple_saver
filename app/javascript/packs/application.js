@@ -29,10 +29,12 @@ import "bootstrap";
 // import { initSelect2 } from '../components/init_select2';
 
 import { initProgressBar } from '../plugins/init_progress_bar';
+import { initSpeechBubble } from '../plugins/init_speech_bubble';
 
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
   initProgressBar();
+  initSpeechBubble();
 });
