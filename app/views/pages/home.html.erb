@@ -1,12 +1,12 @@
 
 <div class="home-container">
   <div class="top-container">
-    <%= link_to "all goals", goals_path, class: "button-home" %>
+    <%= link_to "all goals", goals_path, class: "s-button" %>
     <div class="balance">
       <h1>Balance</h1>
       <h5>$90.000,00</h5>
     </div>
-    <%= link_to "add category", new_category_path, class: "button-home" %>
+    <%= link_to "add category", new_category_path, class: "s-button" %>
   </div>
 
   <div class="dashboard-container">
@@ -15,7 +15,7 @@
       <% if current_user.goals.exists? %>
         <%= render '/goals/show', goal: @current_goal %>
       <% else %>
-        <p> <%= link_to "add goal", new_goal_path, class: "button-home" %> </p>
+        <p> <%= link_to "add goal", new_goal_path, class: "s-button" %> </p>
       <% end %>
     </div>
 

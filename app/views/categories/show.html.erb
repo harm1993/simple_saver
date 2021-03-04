@@ -9,3 +9,17 @@
 <%= link_to "Add an expense",  new_category_expense_path(@category), class: "s-button" %>
 
 <%= render '/expenses/index' %>
+
+<div id="Rectangle">
+  <div id="SpeechBubble" data-percentage="<%= @category.spent_percentage %>">
+  <% if @category.spent_percentage * 100 < 40 %>
+    Kudos! You're doing great!
+  <% elsif @category.spent_percentage * 100 > 40 && @category.spent_percentage * 100< 70 %>
+    Slow down, buddy!
+  <% elsif @category.spent_percentage * 100 > 70 %>
+    Watch out, kiddo!
+  <% else %>
+    Ahi, ahi!
+  <% end %> 
+  You've spent <%= @category.tot_month.to_i %> of the <%= @category.goal_per_month %>€.</div>
+</div>
