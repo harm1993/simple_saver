@@ -1,34 +1,26 @@
 import { MiniBar } from "minibarjs";
 
 const initScrollBar = () => {
-  new MiniBar('.expenses', ,{
-
+  new MiniBar('.exp-container', {
     // or progress
     barType: "default",
-
     // min size
     minBarSize: 10,
-
     // always shows scrollbars
-    alwaysShowBars: false,
-
+    alwaysShowBars: true,
     // enables horizontal/vertical scrollbars
     scrollX: true,
     scrollY: true,
-
     // shows nav buttons
-    navButtons: false,
-
+    navButtons: true,
     // scroll amount in pixels
     scrollAmount: 10,
-    
     // MutationObserver API
     mutationObserver: {
       attributes: false,
       childList: true,
       subtree: true
     },
-
     // default classes
     classes: {
       container: "mb-container",
@@ -53,7 +45,39 @@ const initScrollBar = () => {
     }
 
 });
-);
 }
 
 export { initScrollBar }
+
+
+// CALLBACK FUNCTIONS
+
+// new MiniBar('#myContent',{
+
+//     onInit: function() {},
+//     onUpdate: function() {},
+//     onStart: function() {},
+//     onScroll: function() {},
+//     onEnd: function() {},
+
+// });
+
+// OTHER OPTIONS
+
+// // scrolls to a specific point
+// instance.scrollTo(position, axis);
+
+// // scrolls the content by a certain amount
+// instance.scrollBy(amount, axis, duration, easing);
+
+// // scroll to top
+// instance.scrollToTop();
+
+// // scroll to bottom
+// instance.scrollToBottom();
+
+// // recalculates scollbar sizes and positions
+// instance.update();
+
+// // destroys the scrollbar
+// instance.destroy();
