@@ -1,7 +1,40 @@
-<h1>Goal progress</h1>
 
-<%= @goal.name %>
+<div class="show-goal-container">
 
-<%= link_to "Edit goal", edit_goal_path(@goal), class: "s-button"  %>
-<%= link_to "Delete goal", goal_path(@goal), method: :delete,  class: "s-button"%>
-<%= link_to "All goals", goals_path,  class: "s-button"%>
+  <div class="left-goal-container">
+    <div class="goals-show-title">
+      <h1>Goal progress</h1>
+      <%= image_tag "SimpleSaverTarget", size: "100" %>
+    </div>
+
+    <div class="goals-show-buttons">
+      <%= link_to "Edit goal", edit_goal_path(@goal), class: "goals-button"  %>
+      <%= link_to "Delete goal", goal_path(@goal), method: :delete,  class: "goals-button"%>
+      <%= link_to "All goals", goals_path,  class: "goals-button"%>
+    </div>
+
+
+  </div>
+
+  <div class="right-goal-container">
+
+    <div class="goal-info-containers">
+      <h3>Goal started on:</h3>
+      <strong><%= @goal.created_at.strftime("%d-%m-%Y") %> </strong>
+    </div>
+
+    <div class="goal-info-containers">
+      <h3>Current amount:</h3>
+      <strong> €<%= @goal.saved %> / €<%= @goal.amount %> </strong>
+    </div>
+
+    <div class="goal-info-containers">
+      <h3>Deadline:</h3>
+      <strong><%= @goal.deadline.strftime("%d-%m-%Y") %> </strong>
+    </div>
+
+
+
+  </div>
+
+</div>
