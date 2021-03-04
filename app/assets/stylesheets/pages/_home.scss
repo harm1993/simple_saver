@@ -1,1 +1,51 @@
 // Specific CSS for your home-page
+
+
+// .home-container {
+//    height: 80vh;
+// }
+
+
+.top-container {
+  width: 90%;
+  margin: 0 auto;
+  height: 15%;
+  margin-bottom: 4%;
+  margin-top: 4%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.balance {
+  text-align: center;
+}
+
+.dashboard-container {
+  width: 90%;
+  margin: 0 auto;
+  height: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.goals-dashboard {
+  // background-color: $s-champ;
+  width: 43%;
+  height: 100%;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.categories-dashboard {
+  // background-color: $s-champ;
+  width: 53%;
+  height: 100%;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+a, a:hover {
+  text-decoration: none;
+}

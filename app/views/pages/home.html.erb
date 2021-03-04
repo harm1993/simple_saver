@@ -1,5 +1,31 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="home-container">
+  <div class="top-container">
+    <%= link_to "all goals", goals_path, class: "button-home" %>
+    <div class="balance">
+      <h1>Balance</h1>
+      <h5>$90.000,00</h5>
+    </div>
+    <%= link_to "add category", new_category_path, class: "button-home" %>
+  </div>
 
-<% render '/categories/index', categories: @categories %>
-<%= render '/goals/show', goals: @goals %>
+  <div class="dashboard-container">
+    <div class="goals-dashboard">
+      <h2>Savings progress</h2>
+      <% if current_user.goals.exists? %>
+        <%= render '/goals/show', goal: @current_goal %>
+      <% else %>
+        <p> <%= link_to "add goal", new_goal_path, class: "button-home" %> </p>
+      <% end %>
+    </div>
+
+    <div class="categories-dashboard">
+      <h2>Expense Categories</h2>
+      <% if current_user.categories.count > 0 %>
+        <%= render '/categories/index', categories: @categories %>
+      <% else %>
+        <%= render '/categories/newcall' %>
+      <% end %>
+    </div>
+  </div>
+</div>
+

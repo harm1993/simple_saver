@@ -1,6 +1,11 @@
 class GoalsController < ApplicationController
   def index
-    @goals = Goal.all
+    @completed_goals = current_user.completed_goals
+    @current_goals = current_user.current_goal
+  end
+
+  def show
+    @goal = Goal.find(params[:id])
   end
 
   # create
@@ -29,6 +34,7 @@ class GoalsController < ApplicationController
   def update
     @goal = Goal.find(params[:id])
     @goal.update(goal_params)
+    redirect_to goals_path
   end
 
   # destroy
@@ -36,11 +42,12 @@ class GoalsController < ApplicationController
   def destroy
     @goal = Goal.find(params[:id])
     @goal.destroy
+    redirect_to goals_path
   end
 
   private
 
   def goal_params
-    params.require(:goal).permit(:name, :balance, :completed)
+    params.require(:goal).permit(:name, :amount, :completed, :deadline)
   end
 end

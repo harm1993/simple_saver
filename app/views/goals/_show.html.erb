@@ -1,6 +1,2 @@
-<h1>Goal progress</h1>
-
-<%= @goals.name %>
-
-<%= link_to "delete goal", goals_path(@goal), method: :delete %>
-<%= link_to "All goals", goals_path %>
+<%= goal.name %>
+<div class="state-bar w-50" data-type="circle" data-percentage="<%= goal.percentage %>"></div>
