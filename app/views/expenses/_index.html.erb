@@ -1,6 +1,24 @@
-<% @expenses.each do |expense| %>
-  <h3><%= expense.place %> - <%= expense.amount %></h3>
-  <p>Done on <%= expense.date %></p>
-  <%= link_to "Edit expense",  edit_expense_path(expense), class: "s-button" %>
-  <%= link_to "Delete expense",  expense_path(expense), method: :delete, class: "s-button" %>
-<% end %>
+<div class="expenses">
+  <div class="exp-container d-flex justify-content-around">
+    <div class="exp-details mr-3">
+      <% @expenses.each do |expense| %>
+        <div class="d-flex justify-content-between snap-target">
+          <h3><%= expense.place.capitalize %></h3>
+          <h3>-<%= expense.amount %>€</h3>
+        </div>
+        <div class="d-flex justify-content-between">
+          <p>Done on <%= expense.date %></p>
+        </div>
+        <div class="comands text-left">
+          <%= link_to edit_expense_path(expense) do %>
+            <i class="fas fa-pencil-alt fa-xs"></i>
+          <% end %>
+          <%= link_to expense_path(expense), method: :delete do %>
+            <i class="fas fa-trash-alt fa-xs"></i>
+          <% end %>
+        </div>
+        <hr>
+      <% end %>
+    </div>
+  </div>
+</div>

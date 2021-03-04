@@ -7,8 +7,8 @@ const initProgressBar = () => {
         strokeWidth: 4,
         easing: 'easeInOut',
         duration: 1400,
-        color: '#FFEA82',
-        trailColor: '#FAFAF0',
+        color: 'black',
+        trailColor: 'black',
         trailWidth: 5,
         svgStyle: {width: '100%', height: '100%'},
         from: {color: '#bfff00'},
@@ -16,7 +16,7 @@ const initProgressBar = () => {
         step: (state, bar) => {
           bar.path.setAttribute('stroke', state.color);
         }
-      }); 
+      });
     } else if (container.dataset.type === 'circle') {
       var bar = new ProgressBar.Circle(container, {
         strokeWidth: 6,
@@ -29,7 +29,7 @@ const initProgressBar = () => {
         step: (state, bar) => {
           bar.path.setAttribute('stroke', state.color);
         }
-      }); 
+      });
     }
     bar.animate(container.dataset.percentage);
   })
