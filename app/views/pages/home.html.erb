@@ -19,7 +19,7 @@
     </div>
 
     <div class="categories-dashboard">
-      <h2>Expense Categories</h2>
+      <h2 class="ml-5"> Expense Categories</h2>
       <% if current_user.categories.count > 0 %>
         <%= render '/categories/index', categories: @categories %>
       <% else %>
