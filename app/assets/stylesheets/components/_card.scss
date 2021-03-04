@@ -21,6 +21,7 @@
 
 .category-name-and-bar {
   text-align: left;
+  width: 50px
 }
 
 .card-category {
@@ -34,12 +35,15 @@
   margin-right: 6px;
   border-radius: 6px;
   font-weight: bold;
-  text-decoration: none;
   width: 50px;
   height: 50px;
   text-align: center;
   vertical-align: middle;
   font-size: 30px;
+}
+a {
+  color: white;
+  text-decoration: none !important;
 }
 
 .card-box img {
@@ -55,3 +59,8 @@
   padding: 1px;
 }
 
+// .state-bar {
+//   border: 1px solid grey;
+//   height: 4px;
+//   width: 50px;
+// }
