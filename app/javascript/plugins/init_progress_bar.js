@@ -11,8 +11,8 @@ const initProgressBar = () => {
         trailColor: '#FAFAF0',
         trailWidth: 5,
         svgStyle: {width: '100%', height: '100%'},
-        from: {color: '#00FF00'},
-        to: {color: '#ED6A5A'},
+        from: {color: '#bfff00'},
+        to: {color: '#ff0000'},
         step: (state, bar) => {
           bar.path.setAttribute('stroke', state.color);
         }
@@ -24,8 +24,8 @@ const initProgressBar = () => {
         duration: 1400,
         trailWidth: 5,
         svgStyle: null,
-        from: {color: '#00FF00'},
-        to: {color: '#ED6A5A'},
+        from: {color: '#bfff00'},
+        to: {color: '#ff0000'},
         step: (state, bar) => {
           bar.path.setAttribute('stroke', state.color);
         }
