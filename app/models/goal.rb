@@ -3,6 +3,14 @@ class Goal < ApplicationRecord
 
   validates :name, presence: true
 
+  validate :current_goal_present?
+
+  def current_goal_present?
+    if user.goals.find_by(completed: false)
+      errors.add(:completed, "You already have a current goal, please complete or delete this goal to add a new one.")
+    end
+  end
+
   scope :completed_goals, -> { where(completed: true) }
 
   def percentage

@@ -3,6 +3,7 @@
     <%= f.input :name, label: 'What are you saving for?' %>
     <%= f.input :amount, label: 'How much do you want to save?' %>
     <%= f.input :deadline, label: 'When do you want to reach this goal?' %>
+    <%= goal.errors[ :completed ].first if goal.errors.any? %>
     <%= f.submit class: "s-button"%>
   <% end %>
 </div>
