@@ -1,7 +1,7 @@
 // Specific CSS for your home-page
 
 .home-container {
-  height: 80vh;
+  // height: 80vh;
 }
 
 .top-container {
@@ -34,7 +34,6 @@
   height: 100%;
   border-radius: 10px;
   padding: 20px;
-  box-shadow: 10px 5px 2px grey;
 }
 
 .categories-dashboard {
@@ -43,4 +42,8 @@
   height: 100%;
   border-radius: 10px;
   padding: 20px;
+}
+
+a, a:hover {
+  text-decoration: none;
 }
