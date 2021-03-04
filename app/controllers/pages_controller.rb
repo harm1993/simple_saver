@@ -11,5 +11,6 @@ class PagesController < ApplicationController
   end
 
   def intro
+    render layout: "landing_page"
   end
 end

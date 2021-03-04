@@ -34,13 +34,13 @@
 
     <div class="part_2_container slide_container pt-3">
         <div class="header_part_2"><h1><strong>Save effortlessly with Simplesaver!</strong></h1></div>
-        <div class="container">
+        <div class="container_slide_2">
             <div class="row">
-                <div class="col-7 d-flex align-items-center justify-content-center"><h2>Start with setting a goal you want<br> to save towards</h2></div>
+                <div class="col-7 d-flex align-items-center justify-content-center"><h2>Start with setting a goal you want<br> to save towards.</h2></div>
                 <div class="col-5"><%= image_tag "goals", width: "100%" %></div>
             </div>
             <div class="row">
-                <div class="col-4"><%= image_tag "SimpleSaverBuilding", width: "100%" %></div>
+                <div class="col-4"><%= image_tag "SimpleSaverBuilding", width: "80%" %></div>
                 <div class="col-8 d-flex align-items-center justify-content-center"><h2>Your goal can be anything. How about a<br> gap year to Australia?</h2></div>
             </div>
         </div>
@@ -54,17 +54,17 @@
 <%# 3/4 slide of landing page %>
 
     <div class="page_3_container slide_container">
-        <div class="header_part_3"><h1><strong>To achieve your goals we gonna need to setup some budgets!</strong></h1></div>
+        <div class="total_content_slide_3">
+            <div class="header_part_3"><h1><strong>To achieve your goals we gonna need to setup <br>some budgets!</strong></h1></div>
+                <div class="slide_3_top_content">
+                        <%= image_tag "category", width: "40%" %>
+                            <div class="top_text_slide_3">
+                                <h2>First select an expense you would like to track. Maybe coffee?</h2>
+                                <h2><br>Set a budget you think you can beat. Be sure it's a challenge.</h2>
+                            </div>
+                </div>
 
-         <div class="slide_3_top_content">
-            <%= image_tag "category" %>
-            <div class="top_right_content">
-                <h3>First select an expense you would like to track. Maybe coffee?</h3>
-                <h3>Set a budget you think you can beat. Be sure it's a challenge.</h3>
-            </div>
-         </div>
-        <div class="slide_3_bottom_content">
-            <h3>Add more budgets that are relevant to your situation. We advice you to keep it simple and start with 3 categories</h3>
+            <div class="bottom_text_slide_3"><h2>Add more budgets that are relevant to your situation. We advice you to keep it simple and start with 3 categories.</h2></div>
         </div>
             <div class="next-slide">
                 <h4>final step!</h4>
@@ -75,16 +75,22 @@
 <%# 4/4 slide of landing page     %>
 
     <div class="page_4_container slide_container">
-        <div class="slide_4_top_content">
-            <h3>Your setup is done! Simplesaver will track your spending and provide feedback to help you stick with your goals.</h3>
-            <%= image_tag "SimpleSaverGrowth", width: "50px" %>
-        </div>
+        <div class="slide_4_content">
+            <div class="slide_4_top_content">
+                    <div class="slide_4_top_text">
+                        <h2>Your setup is done! Simplesaver will track your spending and provide feedback to help you stick with your goals.</h2>
+                    </div>
+                <%= image_tag "SimpleSaverGrowth", width: "20%" %>
+            </div>
 
-        <div class="page_4_bottom_content">
-            <%= image_tag "SimpleSaverVictory", width: "50px" %>
-            <h3>Saving has never been easier! Click on the button below to kickstart your account. Happy saving!</h3>
+            <div class="page_4_bottom_content">
+                <%= image_tag "SimpleSaverVictory", width: "20%" %>
+                    <div class="slide_4_bottom_text">
+                        <h2>Saving has never been easier! Click on the button below to kickstart your account. Happy saving!</h2>
+                    </div>
+            </div>
         </div>
-     <button>Start saving!</button>
+     <%= link_to "Start saving!", new_user_session_path, class: "start_saving s-button" %>
     </div>
 </div>
 
