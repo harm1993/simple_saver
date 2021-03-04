@@ -22,13 +22,14 @@
 // }
 
 .row {
-  margin-left: 50px;
+  margin-left: 150px;
 }
 
 .centered-box {
   position: relative;
   height: 100%;
   min-height: 200px;
+  margin-right: 200px;
 }
 
 /* If you want the content centered horizontally and vertically */
@@ -42,5 +43,11 @@
 
 /* Style the image inside the centered container, if needed */
 .centered img {
-  width: 250px;
+  width: 300px;
+}
+
+.row h3 {
+  margin-left: 21px;
+  margin-top: 22px;
+  margin-bottom: 0;
 }
