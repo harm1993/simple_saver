@@ -1,15 +1,15 @@
 .mb-track { 
-  border-radius: 5px; 
+  border-radius: 5px !important; 
+  background-color: #EEE !important;
 }
 
-.mb-track {
-  background-color: #110c10;
-  border-radius: 5px;
+.mb-nav {
+  .mb-bar {
+    border-radius: 5px !important;
+    background-color: $s-orange !important; 
+  }
 }
 
-
-.mb-bar {
-  border-radius: 3px;
-  background-color: $s-orange;
+.mb-button {
+  background-color: #FFF !important;
 }
-

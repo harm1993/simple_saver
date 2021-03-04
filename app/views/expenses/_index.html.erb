@@ -3,8 +3,8 @@
     <div class="exp-details mr-3">
       <% @expenses.each do |expense| %>
         <div class="d-flex justify-content-between snap-target">
-          <h3><%= expense.place.capitalize %></h3>
-          <h3>-<%= expense.amount %>€</h3>
+          <h4><%= expense.place.capitalize %></h4>
+          <h4><strong>-<%= expense.amount %>€</strong></h4>
         </div>
         <div class="d-flex justify-content-between">
           <p>Done on <%= expense.date %></p>
