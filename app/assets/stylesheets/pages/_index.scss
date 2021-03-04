@@ -1,5 +1,7 @@
 // Import page-specific CSS files here.
 @import "home";
+@import "showgoal";
+@import "intro";
 
 * {
   font-family: $s-font;
@@ -13,3 +15,4 @@ h2 {
 h1 {
   font-family: $s-font;
 }
+
