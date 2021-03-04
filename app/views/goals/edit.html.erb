@@ -1,3 +1,11 @@
 <h1>Edit goal</h1>
 
-<%= render "form", goal: @goal %>
+<div class="form-container">
+  <%= simple_form_for(@goal) do |f| %>
+    <%= f.input :name, label: 'What are you saving for?' %>
+    <%= f.input :amount, label: 'How much do you want to save?' %>
+    <%= f.input :deadline, label: 'When do you want to reach this goal?' %>
+    <%= f.check_box :completed %>
+    <%= f.submit class: "s-button"%>
+  <% end %>
+</div>

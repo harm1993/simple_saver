@@ -3,7 +3,7 @@ class Goal < ApplicationRecord
 
   validates :name, presence: true
 
-  validate :current_goal_present?
+  after_save :current_goal_present?
 
   def current_goal_present?
     if user.goals.find_by(completed: false)

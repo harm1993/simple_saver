@@ -4495,6 +4495,11 @@ mini-css-extract-plugin@^0.8.0:
     schema-utils "^1.0.0"
     webpack-sources "^1.1.0"
 
+minibarjs@^0.5.1:
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/minibarjs/-/minibarjs-0.5.1.tgz#0367657efd4e4fc22ecdb5683a5b953983e7c98a"
+  integrity sha512-F1hDy+u2dDh7U/P3Lp5l/Zs0TXZ8nw9MxGmO2A5TFIQfTj7fVizYfTRzWYsqss9q6d0MvPe5m+70TNsOac856A==
+
 minimalistic-assert@^1.0.0, minimalistic-assert@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/minimalistic-assert/-/minimalistic-assert-1.0.1.tgz#2e194de044626d4a10e7f7fbc00ce73e83e4d5c7"

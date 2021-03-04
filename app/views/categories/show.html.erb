@@ -1,25 +1,41 @@
-<h1>Expense overview</h1>
+<div class="container mt-4 d-flex justify-content-around"> 
+  <div class="main">
+    <h1> <%= @category.name %> overwiev </h1>
+    <p class="mt-4"><strong>Hi <%= current_user.first_name %></strong>!
+    <br><br>
+    This month, you've spent <strong><%= @category.tot_month %> of the <%= @category.goal_per_month %>€</strong>.
+    <br>
+    <% if @category.spent_percentage < 0.50 %>
+      Not bad!<br>
+      <strong>Keep up the good work</strong>, your ---goalname will thank you.
+    <% else %>
+      <strong>Keep an eye on it</strong>, your ---goalname needs you!
+    <% end %></p>
+    
+    <ul class="list-unstyled text-left">
+      <li class="p-2"><%= link_to ">Update category", edit_category_path(@category) %></li>
+      <li class="p-2"><%= link_to ">Delete category", category_path(@category), method: :delete %></li>  
+      <li class="p-2"><%= link_to ">Add an expense",  new_category_expense_path(@category) %></li>
+    </ul>
 
-<h1> <%= @category.name %> </h1>
-<p> You've spent <%= @category.tot_month %> of the <%= @category.goal_per_month %>€. </p>
-
-<%= link_to "Update category", edit_category_path(@category), class: "s-button" %>
-<%= link_to "Delete category", category_path(@category), method: :delete, class: "s-button" %>
-
-<%= link_to "Add an expense",  new_category_expense_path(@category), class: "s-button" %>
-
-<%= render '/expenses/index' %>
-
-<div id="Rectangle">
-  <div id="SpeechBubble" data-percentage="<%= @category.spent_percentage %>">
-  <% if @category.spent_percentage * 100 < 40 %>
-    Kudos! You're doing great!
-  <% elsif @category.spent_percentage * 100 > 40 && @category.spent_percentage * 100< 70 %>
-    Slow down, buddy!
-  <% elsif @category.spent_percentage * 100 > 70 %>
-    Watch out, kiddo!
-  <% else %>
-    Ahi, ahi!
-  <% end %> 
-  You've spent <%= @category.tot_month.to_i %> of the <%= @category.goal_per_month %>€.</div>
+    <div id="Rectangle">
+      <div id="SpeechBubble" data-percentage="<%= @category.spent_percentage %>">
+      <% if @category.spent_percentage < 0.4 %>
+        Kudos! You're doing great!
+      <% elsif @category.spent_percentage > 0.4 && @category.spent_percentage * 100< 70 %>
+        Slow down, buddy!
+      <% elsif @category.spent_percentage > 0.7 %>
+        Watch out, kiddo!
+      <% else %>
+        Ahi, ahi!
+      <% end %> 
+      You've spent <%= @category.tot_month.to_i %> of the <%= @category.goal_per_month %>€.</div>
+    </div>
+  </div>
+  
+  <div class="text-center">
+    <h1 class="text-left"><%= Date::MONTHNAMES[Date.today.month] %></h1>
+    <%= render '/expenses/index' %>
+  </div>
 </div>
+

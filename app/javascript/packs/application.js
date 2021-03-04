@@ -30,6 +30,7 @@ import "bootstrap";
 
 import { initProgressBar } from '../plugins/init_progress_bar';
 import { initSpeechBubble } from '../plugins/init_speech_bubble';
+import { initScrollBar } from '../plugins/init_scroll_bar';
 
 
 document.addEventListener('turbolinks:load', () => {
@@ -37,4 +38,5 @@ document.addEventListener('turbolinks:load', () => {
   // initSelect2();
   initProgressBar();
   initSpeechBubble();
+  initScrollBar();
 });
