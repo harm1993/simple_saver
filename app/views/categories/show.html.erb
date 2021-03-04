@@ -1,14 +1,29 @@
-<h1>Expense overview</h1>
-
-<h1> <%= @category.name %> </h1>
-<p> You've spent <%= @category.tot_month %> of the <%= @category.goal_per_month %>€. </p>
-
-<%= link_to "Update category", edit_category_path(@category), class: "s-button" %>
-<%= link_to "Delete category", category_path(@category), method: :delete, class: "s-button" %>
-
-<%= link_to "Add an expense",  new_category_expense_path(@category), class: "s-button" %>
-
-<%= render '/expenses/index' %>
+<div class="container mt-4 d-flex justify-content-around"> 
+  <div class="main">
+    <h1> <%= @category.name %> overwiev </h1>
+    <p class="mt-4">Hi <%= current_user.first_name %>!
+    <br><br>
+    This month, you've spent <%= @category.tot_month %> of the <%= @category.goal_per_month %>€.
+    <br>
+    <% if @category.spent_percentage < 0.50 %>
+      Not bad!<br>
+      Keep up the good work and your ---goalname will thank you.
+    <% else %>
+      Keep an eye on it, your ---goalname needs you!
+    <% end %></p>
+    
+    <ul class="list-unstyled text-left">
+      <li class="p-2"><%= link_to ">Update category", edit_category_path(@category) %></li>
+      <li class="p-2"><%= link_to ">Delete category", category_path(@category), method: :delete %></li>  
+      <li class="p-2"><%= link_to ">Add an expense",  new_category_expense_path(@category) %></li>
+    </ul>
+  </div>
+  
+  <div class="text-center">
+    <h1 class="text-left"><%= Date::MONTHNAMES[Date.today.month] %></h1>
+    <%= render '/expenses/index' %>
+  </div>
+</div>
 
 <div id="Rectangle">
   <div id="SpeechBubble" data-percentage="<%= @category.spent_percentage %>">
