@@ -17,8 +17,13 @@ h2 {
 }
 
 .navbar {
+  box-shadow: 0 0 5px lightgrey;
   height: 70px;
   padding: 0 5%;
   border-radius: 0 0 5px 5px;
   border-bottom: 0.1px solid lightgrey;
+}
+
+#logo {
+  width: 60px;
 }

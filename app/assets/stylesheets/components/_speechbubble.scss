@@ -1,0 +1,57 @@
+#Rectangle {
+  margin: 90px auto;
+  background-color: #ff5a5a;
+  width: 20px;
+  height: 20px;
+  position: relative;
+}
+
+#SpeechBubble {
+  position: absolute;
+  transform-origin: 0% 100%;
+  text-align: center;
+  background-color: $s-orange;
+  color: white;
+  border-radius: 10px;
+  width: 160px;
+  padding: 10px;
+  left: 60px;
+  top: -75px;
+  transform: scale(0);
+  animation-fill-mode: forwards;
+  box-shadow: 0 0 5px lightgrey;
+}
+
+#SpeechBubble::before {
+  content: "";
+  display: block;
+  width: 0;
+  position: absolute;
+  bottom: -25px;
+  left: 5px;
+  border-style: solid;
+  border-width: 15px;
+  border-color: $s-orange transparent transparent $s-orange;
+  transform: rotate(10deg);
+}
+
+@keyframes expand-bounce {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes shrink {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}

@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
+  skip_before_action :authenticate_user!, only: %i[home intro]
   skip_before_action :authenticate_user!, only: [:intro, :home]
 
   def home
@@ -11,5 +12,6 @@ class PagesController < ApplicationController
   end
 
   def intro
+    render layout: "landing_page"
   end
 end
