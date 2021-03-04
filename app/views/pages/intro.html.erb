@@ -24,15 +24,19 @@
                 <h2><%= image_tag "SimpleSaverMoney", height: "80px" %>Save the difference!</h2>
             </div>
         </div>
-        <div class="next-slide">
-            <h4>learn how</h4>
-            <%= image_tag "arrow-down", width: "50px" %>
-        </div>
+        <%= link_to "#slide_2" do %>
+            <div class="next_page">
+                <h3 class="next">learn more</h3>
+                <div class="arrow-container">
+                <div class="arrow-down"></div>
+             </div>
+            </div>
+        <% end %>
     </div>
 
 <%# 2/4 slide of landing page %>
 
-    <div class="part_2_container slide_container pt-3">
+    <div class="part_2_container slide_container pt-3" id="slide_2">
         <div class="header_part_2"><h1><strong>Save effortlessly with Simplesaver!</strong></h1></div>
         <div class="container_slide_2">
             <div class="row">
@@ -44,16 +48,19 @@
                 <div class="col-8 d-flex align-items-center justify-content-center"><h2>Your goal can be anything. How about a<br> gap year to Australia?</h2></div>
             </div>
         </div>
-
-        <div class="next-slide">
-            <h4>next</h4>
-            <%= image_tag "arrow-down", width: "50px" %>
-        </div>
+        <%= link_to "#slide_3" do %>
+            <div class="next-slide">
+                <h3 class="next">next</h3>
+                <div class="arrow-container">
+                <div class="arrow-down"></div>
+                </div>
+            </div>
+        <% end %>
     </div>
 
 <%# 3/4 slide of landing page %>
 
-    <div class="page_3_container slide_container">
+    <div class="page_3_container slide_container" id="slide_3">
         <div class="total_content_slide_3">
             <div class="header_part_3"><h1><strong>To achieve your goals we gonna need to setup <br>some budgets!</strong></h1></div>
                 <div class="slide_3_top_content">
@@ -66,15 +73,17 @@
 
             <div class="bottom_text_slide_3"><h2>Add more budgets that are relevant to your situation. We advice you to keep it simple and start with 3 categories.</h2></div>
         </div>
-            <div class="next-slide">
-                <h4>final step!</h4>
-                <%= image_tag "arrow-down", width: "50px" %>
+        <%= link_to "#slide_4" do %>
+            <div class="arrow-container">
+                <h3 class="next">next</h3>
+                <div class="arrow-down"></div>
             </div>
+        <% end %>
     </div>
 
 <%# 4/4 slide of landing page     %>
 
-    <div class="page_4_container slide_container">
+    <div class="page_4_container slide_container" id="slide_4">
         <div class="slide_4_content">
             <div class="slide_4_top_content">
                     <div class="slide_4_top_text">
