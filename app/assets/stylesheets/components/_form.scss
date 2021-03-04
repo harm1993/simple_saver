@@ -23,4 +23,17 @@
     width: 100%;
   }
 
+   #goal_deadline_3i {
+    padding: 6px
+  }
+
+   #goal_deadline_2i {
+    padding: 6px
+  }
+   #goal_deadline_1i {
+    padding: 6px
+  }
+   .was-validated .form-control:valid, .form-control.is-valid {
+    background-position: right calc(0.75em + 0.1875rem) center;
+  }
 }
