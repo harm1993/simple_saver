@@ -1,0 +1,58 @@
+.show-goal-container {
+  height: 100%;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-goal-container {
+  width: 50%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.goals-show-title {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  img {
+    margin-left: 20px;
+  }
+}
+
+.goals-show-buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.goals-button {
+  background-color: $s-blue;
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
+  padding: 5px 10px;
+}
+
+.right-goal-container {
+  background-color: $s-champ;
+  width: 50%;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.goal-info-containers {
+  width: 100%;
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.goal-info-containers:last-child {
+  margin-bottom: 0px;
+}
