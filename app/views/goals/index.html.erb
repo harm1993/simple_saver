@@ -7,12 +7,14 @@
 
 <h3>Current goals</h3>
 <ul>
-      <%= link_to(goal_path(@current_goals)) do %>
-        <li>
-          <%= @current_goals.name %>
-      <% end %>
-          <%= @current_goals.saved %> | <%= @current_goals.amount %>
-         </li>
+  <% if @current_user.goals.exists? %>
+    <%= link_to(goal_path(@current_goals)) do %>
+      <li>
+        <%= @current_goals.name %>
+    <% end %>
+        <%= @current_goals.saved %> | <%= @current_goals.amount %>
+      </li>
+  <% end %>
 </ul>
 
 <h3>Completed goals</h3>
