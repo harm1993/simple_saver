@@ -31,4 +31,8 @@ h2 {
   display: flex;
   justify-content: center;
   color: $s-orange;
+  align-items: center;
+  #logo-text {
+    margin-left: 20px;
+  }
 }
