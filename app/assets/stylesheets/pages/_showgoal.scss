@@ -1,3 +1,10 @@
+.allgoals {
+  display:flex;
+  flex-direction: column;
+   // justify-content: center;
+   align-items: center;
+}
+
 .show-goal-container {
   height: 100%;
   width: 90%;
