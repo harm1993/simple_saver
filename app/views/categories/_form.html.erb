@@ -1,7 +1,7 @@
 <div class="form-container">
   <%= simple_form_for(category) do |f| %>
      <%= f.input :name %>
-     <%= f.input :goal_per_month %>
+     <%= f.input :goal_per_month, label: "average expense to date" %>
     <%= f.submit class: "s-button"%>
   <% end %>
 </div>
