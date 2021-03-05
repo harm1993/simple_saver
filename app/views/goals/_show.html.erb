@@ -1,2 +1,7 @@
-<div class="state-bar w-50" data-type="circle" data-percentage="<%= goal.percentage %>"></div>
-
+<div class="d-flex justify-content-between">
+  <h4> <%= goal.name %> </h4>
+  <p>90 / 750€</p>
+  <%# <p> just to try the css
+  has to be changed with > goal.percentage < %>
+</div>
+<div class="state-bar" data-type="circle" data-percentage="<%= goal.percentage %>"></div>
