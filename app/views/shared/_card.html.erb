@@ -1,11 +1,8 @@
 <div class="snap-target my-2">
   <div class="card-box">
-
-
-  <div class="card-pic">
+    <div class="card-pic">
     <%= image_tag "coffee.png", alt: "card_category_name" %>
-  </div>
-
+    </div>
     <div class="card-bar-text-percentage">
       <div class="category-name-and-bar">
         <div class="d-flex justify-content-between">
@@ -15,9 +12,8 @@
         <div class="card-bar"><div class="state-bar" data-type="line" data-percentage="<%= category.spent_percentage %>"></div></div>
       </div>
     </div>
-
-    <div class="card-button"><%= link_to ">", category %></div>
-
+    <div class="card-button"><%= link_to ">", category %>
+    </div>
   </div>
 </div>
 <!-- <p><%= category.tot_month %> / <%= category.goal_per_month %></p> -->

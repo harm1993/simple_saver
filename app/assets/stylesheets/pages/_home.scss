@@ -4,39 +4,57 @@
 // .home-container {
 //    height: 80vh;
 // }
+// .home-container {
+//   display: flex;
+//   // justify-content: center;
 
+// }
 
 .top-container {
   width: 90%;
   margin: 0 auto;
   height: 15%;
-  margin-bottom: 4%;
-  margin-top: 4%;
+  margin-bottom: 2%;
+  margin-top: 2%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: 0 20px;
-}
+  }
+
 
 .balance {
   text-align: center;
 }
 
 .dashboard-container {
-  width: 90%;
+  width: 50%;
   margin: 0 auto;
   height: 60%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: flex-start !important;
 }
 
-.goals-dashboard,
-.categories-dashboard {
-  // background-color: $s-champ;
-  width: 48%;
+.goals-dashboard {
+  width: 470px;
   height: 100%;
   border-radius: 10px;
   padding: 20px;
+}
+
+
+.categories-dashboard {
+  // background-color: $s-champ;
+  width: 500px;
+  height: 100%;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.goals-dashboard h2,
+.categories-dashboard h2 {
+margin-bottom: 30px !important
 }
 
 a, a:hover {
