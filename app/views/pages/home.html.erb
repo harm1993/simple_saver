@@ -11,7 +11,7 @@
   <div class="dashboard-container text-left">
     <div class="goals-dashboard">
       <h2>Savings progress</h2>
-      <% if current_user.goals.exists? %>
+      <% if @current_goal %>
         <%= render '/goals/show', goal: @current_goal %>
       <% else %>
         <p> <%= link_to "Add goal", new_goal_path, class: "s-button" %> </p>
