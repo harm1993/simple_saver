@@ -1,4 +1,4 @@
-<div class="container mt-4 d-flex justify-content-around"> 
+<div class="container mt-4 d-flex justify-content-around">
   <div class="main">
     <h1> <%= @category.name %> overwiev </h1>
     <p class="mt-4"><strong>Hi <%= current_user.first_name %></strong>!
@@ -11,11 +11,11 @@
     <% else %>
       <strong>Keep an eye on it</strong>, your ---goalname needs you!
     <% end %></p>
-    
+
     <ul class="list-unstyled text-left">
-      <li class="p-2"><%= link_to ">Update category", edit_category_path(@category) %></li>
-      <li class="p-2"><%= link_to ">Delete category", category_path(@category), method: :delete %></li>  
-      <li class="p-2"><%= link_to ">Add an expense",  new_category_expense_path(@category) %></li>
+      <li class="p-2"><%= link_to "Update category", edit_category_path(@category), class: "s-button" %></li>
+      <li class="p-2"><%= link_to "Delete category", category_path(@category), class: "s-button", method: :delete %></li>
+      <li class="p-2"><%= link_to "Add an expense",  new_category_expense_path(@category), class: "s-button" %></li>
     </ul>
 
     <div id="Rectangle">
@@ -28,11 +28,11 @@
         Watch out, kiddo!
       <% else %>
         Ahi, ahi!
-      <% end %> 
+      <% end %>
       You've spent <%= @category.tot_month.to_i %> of the <%= @category.goal_per_month %>€.</div>
     </div>
   </div>
-  
+
   <div class="text-center">
     <h1 class="text-left"><%= Date::MONTHNAMES[Date.today.month] %></h1>
     <%= render '/expenses/index' %>
