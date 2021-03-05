@@ -1,21 +1,27 @@
-<div class="card-box">
+<div class="snap-target my-2">
+  <div class="card-box">
+
 
   <div class="card-pic">
-    <%= image_tag "coffee", alt: "card_category_name" %>
+    <%= image_tag "coffee.png", alt: "card_category_name" %>
   </div>
 
-  <div class="card-bar-text-percentage">
-
-    <div class="category-name-and-bar">
-      <p class="card-category">Coffee</p>
-      <div class="card-bar">-----------------------------</div>
+    <div class="card-bar-text-percentage">
+      <div class="category-name-and-bar">
+        <div class="d-flex justify-content-between">
+          <p class="card-category"><%= category.name.capitalize %></p>
+          <div class="card-percentage"><%= (category.spent_percentage*100).to_i %>%</div>
+        </div>
+        <div class="card-bar"><div class="state-bar" data-type="line" data-percentage="<%= category.spent_percentage %>"></div></div>
+      </div>
     </div>
 
-    <div class="card-percentage">15%</div>
+    <div class="card-button"><%= link_to ">", category %></div>
 
   </div>
-
-  <div class="card-button"> > </div>
-
 </div>
+<!-- <p><%= category.tot_month %> / <%= category.goal_per_month %></p> -->
+ <!-- <h1><%= link_to category.name, category %></h1> -->
+
+
 

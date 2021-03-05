@@ -4,7 +4,7 @@
   <div class="left-goal-container">
     <div class="goals-show-title">
       <h1>Goal progress</h1>
-      <%= image_tag "SimpleSaverTarget", size: "100" %>
+      <%= image_tag "SimpleSaverTarget.svg", size: "100" %>
     </div>
 
     <div class="state-bar w-50 center" data-type="circle" data-percentage="<%= @goal.percentage %>"></div>
@@ -36,11 +36,12 @@
     </div>
 
     <div class="goal-info-containers">
-      <h3>Completed:</h3>
-      <% if @goal.completed == false %>
-        <strong> Working hard on achieving this goal! </strong>
+
+      <h3>Status:</h3>
+      <% if @goal.completed == true %>
+        <strong>Completed</strong>
       <% else %>
-        <strong> This goal is completed!</strong>
+        <strong>In process</strong>
       <% end %>
     </div>
 
