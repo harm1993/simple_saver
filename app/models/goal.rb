@@ -14,7 +14,7 @@ class Goal < ApplicationRecord
   scope :completed_goals, -> { where(completed: true) }
 
   def percentage
-    (1..100).to_a.sample.to_f / 100
+    0.001
 
     # the current method is provvisory to test the js proress bar out
     # >> CHANGE TO <<

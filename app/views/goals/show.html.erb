@@ -7,6 +7,8 @@
       <%= image_tag "SimpleSaverTarget.svg", size: "100" %>
     </div>
 
+    <div class="state-bar w-50 center" data-type="circle" data-percentage="<%= @goal.percentage %>"></div>
+
     <div class="goals-show-buttons">
       <%= link_to "Edit goal", edit_goal_path(@goal), class: "goals-button"  %>
       <%= link_to "Delete goal", goal_path(@goal), method: :delete,  class: "goals-button"%>
@@ -34,6 +36,7 @@
     </div>
 
     <div class="goal-info-containers">
+
       <h3>Status:</h3>
       <% if @goal.completed == true %>
         <strong>Completed</strong>

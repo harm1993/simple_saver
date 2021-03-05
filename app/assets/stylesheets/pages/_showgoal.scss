@@ -15,12 +15,16 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  .w-50 {
+    margin: 0 auto;
+  }
 }
 
 .goals-show-title {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin-bottom: 25px;
   img {
     margin-left: 20px;
   }
@@ -29,6 +33,7 @@
 .goals-show-buttons {
   display: flex;
   justify-content: space-around;
+  margin-top: 40px;
 }
 
 .goals-button {
