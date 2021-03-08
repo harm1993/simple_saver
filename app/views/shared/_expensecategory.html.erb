@@ -1,0 +1,46 @@
+
+<div class="card-expcat-container">
+
+  <div class="card-expcat-title">
+    <h3>Expense categories</h3>
+    <%= link_to "Add a category", new_category_path %>
+  </div>
+
+  <div class="card-framework">
+
+    <div class="layout-container">
+      <div class="category-logo-container">
+        <%= image_tag "coffee.png", alt: "card_category_name", style: 'height:40px;'%>
+      </div>
+
+      <div class="exp-cat-card-mid">
+        <div class="text-x-progressbar">
+          <p>Coffee</p>
+          <p>50%</p>
+        </div>
+        <div class="progress-barz"></div>
+      </div>
+    </div>
+
+    <div class="icons-container">
+      <%= link_to new_category_path do %>
+        <%= image_tag "add.svg", alt: "add button", style: 'height:22px; margin-right: 5px; margin-top: 4px;' %>
+      <% end %>
+
+      <%= link_to edit_category_path(:id) do%>
+        <%= image_tag "edit.svg", alt: "add button", style: 'height:25px;' %>
+      <% end %>
+
+      <%= link_to category_path(:id), method: :delete do %>
+        <%= image_tag "trash.svg", alt: "add button", style: 'height:23px; margin-top: 2px;' %>
+      <% end %>
+
+    </div>
+
+
+
+  </div>
+
+  <hr>
+
+</div>

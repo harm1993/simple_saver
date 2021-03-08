@@ -43,8 +43,8 @@ ActiveRecord::Schema.define(version: 2021_03_08_112440) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.date "deadline"
-    t.integer "archieved_amount"
     t.decimal "saved", default: "0.0"
+    t.integer "archieved_amount"
     t.index ["user_id"], name: "index_goals_on_user_id"
   end
 
