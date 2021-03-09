@@ -5,7 +5,7 @@ const initProgressBar = () => {
     if (!container.querySelector('svg')) {
       if (container.dataset.type === 'line') {
         var bar = new ProgressBar.Line(container, {
-          strokeWidth: 4,
+          strokeWidth: 6,
           easing: 'easeInOut',
           duration: 1400,
           color: '#EEE',

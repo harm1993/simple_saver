@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
   has_many :categories, dependent: :destroy
   has_many :goals
-  has_many :transactions, through: :categories
+  has_many :expenses, through: :categories
 
   def current_goal
     goals.find_by(completed: false)
@@ -16,13 +16,10 @@ class User < ApplicationRecord
     goals.where(completed: true)
   end
 
-  def overall_progress
-    categories = self.categories
-    percentages = []
-    categories.each do |category|
-      percentages << category.spent_percentage
-    end
-    (percentages.sum / percentages.count * 100).to_i
+  # Finance coach logic
+
+  def total_categories
+    categories.sum(:goal_per_month)
   end
 
   def saving_potential
@@ -34,21 +31,50 @@ class User < ApplicationRecord
     unspent.sum.to_i
   end
 
-#  validates :first_name, presence: true
-#  validates :date_of_birth, presence: true
+  def overall_progress
+    unspent = total_categories - saving_potential
+    unspent_per = unspent.to_f / total_categories * 100
+    unspent_per.round(1)
+
+    # categories = self.categories
+    # percentages = []
+    # categories.each do |category|
+    #   percentages << category.spent_percentage
+    # end
+    # (percentages.sum / percentages.count * 100).to_i
+  end
+
+  def days_month_passed
+    days_months = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+
+    amount_of_days = days_months[Date.today.month - 1]
+    (Date.today.day.to_f / amount_of_days * 100).round(1)
+  end
+
+  def spending_pattern
+    spenditure_status = days_month_passed - overall_progress
+
+    # if spenditure_status < -10.0
+    #   "oefff watch your spending"
+    # elsif spenditure_status > 10
+    #   "You're doing great. Keep this up and your goal will be reached in no time."
+    # else
+    #   "You're on track"
+    # end
+  end
+
+  #  validates :first_name, presence: true
+  #  validates :date_of_birth, presence: true
 end
-
-
-
 
 # TODO #
 
 # #Overall progress
-#   > average of percentages of all categories 
+#   > average of percentages of all categories
 #     (per month)
 #
 #   categories = current_user.categories
-#   percentages [] = 
+#   percentages [] =
 #   > categories.each > category.spent_percentage > push to array
 #   > percentages.sum / percentages.count
 
@@ -56,8 +82,8 @@ end
 # #Saving potential
 #   > sum of the unspended amount from all categories
 #     (per month)
-#   
+#
 #   categories = current_user.categories
-#   unspent [] = 
+#   unspent [] =
 #   > categories.each > category.goal_per_month - category.tot_month > push to array
-#   > unspended.sum 
+#   > unspended.sum

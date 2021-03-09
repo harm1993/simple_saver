@@ -1,104 +1,64 @@
-<div class="landing_page_container">
-
-<%# 1/4 slide of landing page %>
-    <div class="part_1_container slide_container">
-     <div class="container-fluid">
-        <div class="row">
-            <div class="col-3 align-items-center d-flex justify-content-end">
-            <%= image_tag "SimpleSaverPiggy.svg", class: 'py-3 pl-3', height: '210px' %>
-            </div>
-            <div class="col-7 d-flex align-items-center text-center"><h1 class="header pt-4"><strong>Save automatically and reach your financial goals in 3 simple steps!</strong></h1></div>
-        </div>
+<div class="i-container text-center">
+  <div class="d-flex justify-content-between">
+    <div class="text-left half-screen">
+      <h1 class="logo font-weight-bold">SimpleSaver</h1><br>
+      <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for     previewing   layouts and visual mockups.</p>
     </div>
+    <%= image_tag "i-screen.png", height: "350px" %>
+  </div>
+</div>
 
-        <div class="container-steps">
-            <div class="set-goal">
-                <h2><%= image_tag "SimpleSaverTarget.svg", height: "80px" %>Set a goal</h2>
-            </div>
-
-            <div class="add-budget">
-                <h2><%= image_tag "SimpleSaverGrowth.svg", height: "80px" %>Add a budget</h2>
-            </div>
-
-            <div class="save-difference">
-                <h2><%= image_tag "SimpleSaverMoney.svg", height: "80px" %>Save the difference!</h2>
-            </div>
+  <div class="step-cards py-2">
+    <div class="i-container text-center">
+      <h2 class="pb-4">Save automatically and reach your financial goals<br> in 3 simple steps!</h2>
+      <div class="d-flex justify-content-between align-items-center mt-5">
+        <div class="i-step">
+          <%= image_tag "SimpleSaverMoney.svg", height: "60px", class: "mb-2 icon-bw" %>
+          <h5 class="font-weight-bold">Add a budget</h5>
         </div>
-        <%= link_to "#slide_2", data: {turbolinks: false} do %>
-            <div class="next_page">
-                <h3 class="next">learn more</h3>
-                <div class="arrow-container">
-                <div class="arrow-down"></div>
-             </div>
-            </div>
-        <% end %>
-    </div>
-
-<%# 2/4 slide of landing page %>
-
-    <div class="part_2_container slide_container pt-3" id="slide_2">
-        <div class="header_part_2"><h1><strong>Save effortlessly with Simplesaver!</strong></h1></div>
-        <div class="container_slide_2">
-            <div class="row">
-                <div class="col-7 d-flex align-items-center justify-content-center"><h2>Start with setting a goal you want<br> to save towards.</h2></div>
-                <div class="col-5"><%= image_tag "goals.png", width: "100%" %></div>
-            </div>
-            <div class="row">
-                <div class="col-4"><%= image_tag "SimpleSaverBuilding.svg", width: "80%" %></div>
-                <div class="col-8 d-flex align-items-center justify-content-center"><h2>Your goal can be anything. How about a<br> gap year to Australia?</h2></div>
-            </div>
+        <div class="i-step">
+          <%= image_tag "SimpleSaverTarget.svg", height: "60px", class: "mb-2 icon-bw" %>
+          <h5 class="font-weight-bold">Set a goal</h5>
         </div>
-        <%= link_to "#slide_3", data: {turbolinks: false} do %>
-            <div class="next-slide">
-                <h3 class="next">next</h3>
-                <div class="arrow-container">
-                <div class="arrow-down"></div>
-                </div>
-            </div>
-        <% end %>
-    </div>
-
-<%# 3/4 slide of landing page %>
-
-    <div class="page_3_container slide_container" id="slide_3">
-        <div class="total_content_slide_3">
-            <div class="header_part_3"><h1><strong>To achieve your goals we gonna need to setup <br>some budgets!</strong></h1></div>
-                <div class="slide_3_top_content">
-                        <%= image_tag "category.png", width: "40%" %>
-                            <div class="top_text_slide_3">
-                                <h2>First select an expense you would like to track. Maybe coffee?</h2>
-                                <h2><br>Set a budget you think you can beat. Be sure it's a challenge.</h2>
-                            </div>
-                </div>
-
-            <div class="bottom_text_slide_3"><h2>Add more budgets that are relevant to your situation. We advice you to keep it simple and start with 3 categories.</h2></div>
+        <div class="i-step">
+          <%= image_tag "SimpleSaverPiggy.svg", height: "60px", class: "mb-2 icon-bw" %>
+          <h5 class="font-weight-bold">Save the difference</h5>
         </div>
-        <%= link_to "#slide_4", data: {turbolinks: false} do %>
-                <h3 class="next">next</h3>
-                <div class="arrow-container">
-                <div class="arrow-down"></div>
-            </div>
-        <% end %>
+      </div>
     </div>
+  </div>
 
-<%# 4/4 slide of landing page     %>
-
-    <div class="page_4_container slide_container" id="slide_4">
-        <div class="slide_4_content">
-            <div class="slide_4_top_content">
-                    <div class="slide_4_top_text">
-                        <h2>Your setup is done! Simplesaver will track your spending and provide feedback to help you stick with your goals.</h2>
-                    </div>
-                <%= image_tag "SimpleSaverGrowth.svg", width: "20%" %>
-            </div>
-
-            <div class="page_4_bottom_content">
-                <%= image_tag "SimpleSaverVictory.svg", width: "20%" %>
-                    <div class="slide_4_bottom_text">
-                        <h2>Saving has never been easier! Click on the button below to kickstart your account. Happy saving!</h2>
-                    </div>
-            </div>
-        </div>
-     <%= link_to "Start saving!", new_user_session_path, class: "start_saving s-button" %>
+<div class="i-container text-center">
+  <div class="d-flex justify-content-between align-items-center">
+    <div class="i-text text-left half-screen">
+      <h3 class="font-weight-bold mt-2" id="type-1"></h3>
+      <p>First select an expense category you would like to track. Maybe coffee?</p>
+      <p>You choose to track your expenses monthly, for a weekend or as long as you want.</p>
+      <p>Set a budget you think you can beat. Be sure it’s a challenge. </p>
     </div>
+    <%= image_tag "i-desk.png", height: "200px", class: "half-screen img-right img-shadow" %>
+  </div>
+  <hr>
+
+  <div class="d-flex justify-content-between">
+    <%= image_tag "i-couch.png", height: "200px", class: "half-screen img-left img-shadow" %>
+    <div class="i-text text-left half-screen ml-5">
+      <h3 class="font-weight-bold mt-2" id="type-2"></h3>
+      <p>Continue by choosing a goal you want to save towards, and set a budget.</p>
+      <p>Saving is easier, fun and rewarding when you know what you're doing it for.</p>
+      <p>Your goal can be antyhing. How does a gap year in Australia sounds like?</p>
+    </div>
+  </div>
+  <hr>
+
+  <div class="d-flex justify-content-between mb-5">
+    <div class="i-text text-left half-screen">
+      <p>Your setup is done! Simplesaver will track your spending and provide feedback to help you stick with your goals.</p>
+      <p>Saving has never been easier! Click on the button below to kickstart your account and start your journey. </p>
+      <h3 class="call font-weight-bold mt-5" id="type-hs"></h3>
+    </div>
+    <%= image_tag "i-party.png", height: "200px", class: "half-screen img-right img-shadow" %>
+  </div>
+
+  <%= link_to "Start saving!", new_user_session_path, class: "start_saving s-button confetti-button img-shadow" %>
 </div>
