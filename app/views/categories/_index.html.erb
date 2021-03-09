@@ -1,4 +1,13 @@
-<div class="categories"> <% categories.each do |category| %>
+<div class="categories">
+  <% categories.each do |category| %>
     <%= render 'shared/card', category: category%>
   <% end %>
+  <%= current_user.saving_potential %>
+  <%= current_user.total_categories %>
+  <%= current_user.overall_progress %>
+  <br>
+  <%= current_user.days_month_passed %>
+  <hr>
+  <%= current_user.spending_pattern %>
+
 </div>
