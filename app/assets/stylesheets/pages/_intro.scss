@@ -13,8 +13,7 @@
 
 .step-cards {
   background-color: #ADD8E6;
-  height: 400px;
-  margin: 80px auto;
+  border-radius: 20px;
 }
 
 .i-text h3 {
@@ -26,7 +25,26 @@
   color: #da4471;
 }
 
-.i-container .s-button {
-  width: 100px;
-  margin-top: 80px;
+.i-container h2 {
+  color: #000;
+}
+
+.i-container hr {
+  margin-top: 50px;
+  margin-bottom: 50px
+}
+
+.img-right {
+  object-fit: contain;
+  object-position: 100%;
+}
+
+.img-left {
+  object-fit: contain;
+  object-position: 0%;
+}
+
+.img-shadow {
+  filter: drop-shadow(10px 6px 4px lightgrey);
+  -webkit-filter: drop-shadow(10px 6px 4px lightgrey);
 }
