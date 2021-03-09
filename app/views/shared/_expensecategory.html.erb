@@ -1,11 +1,27 @@
 
 <%# <div class="card-expcat-container"> %>
 
-
   <div class="card-framework">
 
     <div class="layout-container">
-      <div class="category-logo-container" style="background-image:url(<%= asset_path category.name.downcase %>)">
+
+      <div class="category-logo-container">
+         <% if category.name == "Meals" %>
+          <%= image_tag "lunch.svg", style: 'height:40px;'%>
+          <% elsif category.name == "Coffee" %>
+          <%= image_tag "coffee-cup.svg", style: 'height:40px;'%>
+          <% elsif category.name == "Cigarettes" %>
+          <%= image_tag "cigarette.svg", style: 'height:40px;'%>
+          <% elsif category.name == "Delivery" %>
+          <%= image_tag "pizza.svg", style: 'height:40px;'%>
+          <% elsif category.name == "Other" %>
+          <%= image_tag "debit-card.svg", style: 'height:40px;'%>
+          <% elsif category.name == "Shopping" %>
+          <%= image_tag "online-shopping.svg", style: 'height:40px;'%>
+          <% end  %>
+
+<!--       <div class="category-logo-container" style="background-image:url(<%= asset_path category.name.downcase %>)"> -->
+
       </div>
 
       <div class="exp-cat-card-mid">
@@ -18,24 +34,25 @@
     </div>
 
     <div class="icons-container">
-      <%= link_to new_category_path do %>
+
+      <href type="button" data-toggle="modal" data-target="#expenseModal-new-<%=category.id%>">
         <%= image_tag "add.svg", alt: "add button", style: 'height:22px; margin-right: 5px; margin-top: 4px;' %>
-      <% end %>
+      </href>
 
-      <%= link_to edit_category_path(:id) do%>
+       <href type="button" data-toggle="modal" data-target="#editCategoryModal-<%=category.id%>">
         <%= image_tag "edit.svg", alt: "add button", style: 'height:25px;' %>
-      <% end %>
+        </href>
 
-      <%= link_to category_path(:id), method: :delete do %>
+      <%= link_to category_path(category), method: :delete do %>
         <%= image_tag "trash.svg", alt: "add button", style: 'height:23px; margin-top: 2px;' %>
       <% end %>
 
     </div>
-
-
-
+     <%= render '/expenses/modal', category: category %>
+     <%= render '/categories/modal_edit', category: category %>
   </div>
+ <hr>
 
-  <hr>
 
 <%# </div> %>
+

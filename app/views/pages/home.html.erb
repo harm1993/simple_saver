@@ -7,6 +7,12 @@
       <a class="nav-link" id="v-pills-goals-tab" data-toggle="pill" href="#v-pills-goals" role="tab" aria-controls="v-pills-goals" aria-selected="false"><%= image_tag "target_icon.svg", width: "25px" %>Goals</a>
       <a class="nav-link active" id="v-pills-statistics-tab" data-toggle="pill" href="#v-pills-statistics" role="tab" aria-controls="v-pills-statistics" aria-selected="true"><%= image_tag "graph_icon.svg", width: "25px" %>Statistics</a>
     </div>
+    <button type="button" class="s-button" data-toggle="modal" data-target="#categoryModal-new">
+  Add category
+</button>
+<%= render '/categories/modal' %>
+  </div>
+
   </div>
 
   <div class="dashboard-content">
@@ -53,5 +59,4 @@
   </div>
 </div>
 <%= render '/categories/modal' %>
-
 
