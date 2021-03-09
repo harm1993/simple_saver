@@ -1,4 +1,32 @@
 .i-container {
-  width: 80vw;
-  margin: 0 auto;
+  width: 70vw;
+  margin: 80px auto 80px auto;
+}
+
+.i-header {
+  margin-top: 80px;
+}
+
+.half-screen {
+  flex: 1;
+}
+
+.step-cards {
+  background-color: #ADD8E6;
+  height: 400px;
+  margin: 80px auto;
+}
+
+.i-text h3 {
+  color: $s-blue;
+}
+
+.logo,
+.i-text .call {
+  color: #da4471;
+}
+
+.i-container .s-button {
+  width: 100px;
+  margin-top: 80px;
 }

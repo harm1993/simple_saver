@@ -5,7 +5,7 @@ const initProgressBar = () => {
     if (!container.querySelector('svg')) {
         if (container.dataset.type === 'line') {
         var bar = new ProgressBar.Line(container, {
-          strokeWidth: 4,
+          strokeWidth: 6,
           easing: 'easeInOut',
           duration: 1400,
           color: '#EEE',
@@ -20,7 +20,7 @@ const initProgressBar = () => {
         });
       } else if (container.dataset.type === 'circle') {
         var bar = new ProgressBar.Circle(container, {
-          strokeWidth: 6,
+          strokeWidth: 8,
           easing: 'easeInOut',
           duration: 1400,
           trailWidth: 5,
