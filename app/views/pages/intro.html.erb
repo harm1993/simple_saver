@@ -4,41 +4,45 @@
       <h1 class="logo font-weight-bold">SimpleSaver</h1>
       <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for     previewing   layouts and visual mockups.</p>
     </div>
-    <%= image_tag "i-screen.png", width: "20%", class: "half-screen" %>
+    <%= image_tag "i-screen.png", height: "300px", class: "half-screen img-right img-shadow" %>
   </div>
+</div>
 
-  <div class="step-cards">
-    <h1>Save automatically and reach your financial goals in 3 simple steps!</h1>
-    <div class="d-flex justify-content-between align-items-center">
-      <div class="i-step">
-        <i class="fas fa-bullseye"></i>
-        <h5 class="font-weight-bold">Set a goal</h5>
-      </div>
-      <div class="i-step">
-        <i class="fas fa-wallet"></i>
-        <h5 class="font-weight-bold">Add a budget</h5>
-      </div>
-      <div class="i-step">
-        <i class="fas fa-money-check-alt"></i>
-        <h5 class="font-weight-bold">Save the difference</h5>
+  <div class="step-cards py-2">
+    <div class="i-container text-center">
+      <h2 class="pb-4">Save automatically and reach your financial goals<br> in 3 simple steps!</h2>
+      <div class="d-flex justify-content-between align-items-center mt-5">
+        <div class="i-step">
+          <i class="fas fa-bullseye"></i>
+          <h5 class="font-weight-bold">Set a goal</h5>
+        </div>
+        <div class="i-step">
+          <i class="fas fa-wallet"></i>
+          <h5 class="font-weight-bold">Add a budget</h5>
+        </div>
+        <div class="i-step">
+          <i class="fas fa-money-check-alt"></i>
+          <h5 class="font-weight-bold">Save the difference</h5>
+        </div>
       </div>
     </div>
   </div>
 
-  <div class="d-flex justify-content-between">
+<div class="i-container text-center">
+  <div class="d-flex justify-content-between align-items-center">
     <div class="i-text text-left half-screen">
       <h3 class="font-weight-bold mt-2">1. Set categories</h3>
       <p>First select an expense category you would like to track. Maybe coffee?</p>
       <p>You choose to track your expenses monthly, for a weekend or as long as you want.</p>
       <p>Set a budget you think you can beat. Be sure it’s a challenge. </p>
     </div>
-    <%= image_tag "i-desk.png", width: "20%", class: "half-screen" %>
+    <%= image_tag "i-desk.png", height: "200px", class: "half-screen img-right img-shadow" %>
   </div>
   <hr>
 
   <div class="d-flex justify-content-between">
-    <%= image_tag "i-couch.png", width: "20%", class: "half-screen" %>
-    <div class="i-text text-right half-screen ml-5">
+    <%= image_tag "i-couch.png", height: "200px", class: "half-screen img-left img-shadow" %>
+    <div class="i-text text-left half-screen ml-5">
       <h3 class="font-weight-bold mt-2">2. Set your goal</h3>
       <p>Continue by choosing a goal you want to save towards, and set a budget.</p>
       <p>Saving is easier, fun and rewarding when you know what you're doing it for.</p>
@@ -47,14 +51,14 @@
   </div>
   <hr>
 
-  <div class="d-flex justify-content-between">
+  <div class="d-flex justify-content-between mb-5">
     <div class="i-text text-left half-screen">
       <p>Your setup is done! Simplesaver will track your spending and provide feedback to help you stick with your goals.</p>
       <p>Saving has never been easier! Click on the button below to kickstart your account and start your journey. </p>
       <h3 class="call font-weight-bold mt-5">Happy saving!</h3>
     </div>
-    <%= image_tag "i-party.png", width: "20%", class: "half-screen" %>
+    <%= image_tag "i-party.png", height: "200px", class: "half-screen img-right img-shadow" %>
   </div>
 
-  <%= link_to "Start saving!", new_user_session_path, class: "start_saving s-button" %>
+  <%= link_to "Start saving!", new_user_session_path, class: "start_saving s-button confetti-button" %>
 </div>
