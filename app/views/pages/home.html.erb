@@ -1,36 +1,57 @@
-<div class="home-container">
-  <div class="top-container">
-    <%= link_to "All goals", goals_path, class: "s-button" %>
-    <div class="balance">
-      <h1>Overview</h1>
-      <!-- <h5>$90.000,00</h5> -->
+
+<div class="dashboard-container">
+ <div class="sidebar">
+    <div class="text-center" id="logo-dashboard"><%= image_tag "simpleSLogo.png", width: "90px" %></div>
+    <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+      <a class="nav-link" id="v-pills-overview-tab" data-toggle="pill" href="#v-pills-overview" role="tab" aria-controls="v-pills-overview" aria-selected="false"><%= image_tag "compass_icon.svg", width: "25px" %>Overview</a>
+      <a class="nav-link" id="v-pills-goals-tab" data-toggle="pill" href="#v-pills-goals" role="tab" aria-controls="v-pills-goals" aria-selected="false"><%= image_tag "target_icon.svg", width: "25px" %>Goals</a>
+      <a class="nav-link active" id="v-pills-statistics-tab" data-toggle="pill" href="#v-pills-statistics" role="tab" aria-controls="v-pills-statistics" aria-selected="true"><%= image_tag "graph_icon.svg", width: "25px" %>Statistics</a>
     </div>
-    <button type="button" class="s-button" data-toggle="modal" data-target="#categoryModal">
-  Add category
-</button>
-<%= render '/categories/modal' %>
   </div>
 
-  <div class="dashboard-container text-left">
-    <div class="goals-dashboard">
-      <h2>Savings progress</h2>
-      <% if @current_goal %>
-        <%= render '/goals/show', goal: @current_goal %>
-      <% else %>
-        <p> <%= link_to "Add goal", new_goal_path, class: "s-button" %> </p>
-      <% end %>
-    </div>
+  <div class="dashboard-content">
+    <div class="tab-content" id="v-pills-tabContent">
+      <div class="tab-pane fade" id="v-pills-statistics" role="tabpanel" aria-labelledby="v-pills-statistics-tab">test1</div>
+      <div class="tab-pane fade show active" id="v-pills-overview" role="tabpanel" aria-labelledby="v-pills-overview-tab">
+       <h1>Overview</h1>
+        <div class="container-fluid">
+          <div class="row mb-3">
+            <div class="col-12 col-sm-6">
+              <div class="dashboard-card" id="saving-chart">
 
-    <div class="categories-dashboard">
-      <h2 class="ml-4">Expense Categories</h2>
-      <% if @categories.exists? %>
-        <%= render '/categories/index', categories: @categories %>
-      <% else %>
-        <%= render '/categories/newcall' %>
-      <% end %>
-    </div>
+                <% if @current_goal %>
+                  <%= render '/goals/show', goal: @current_goal %>
+                <% else %>
+                  <p> <%= link_to "Add goal", new_goal_path, class: "s-button" %> </p>
+                <% end %>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6">
+              <%= image_tag "placeholder_350.png" %>
+            </div>
+          </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="dashboard-card">
+                  <div class="card-expcat-title">
+                    <h3>Expense categories</h3>
+                    <a href="#" data-toggle="modal" data-target="#categoryModal">Add category</a>
+                  </div>
+                  <% if @categories.exists? %>
+                    <% @categories.each do |category| %>
+                      <%= render '/shared/expensecategory', category: category %>
+                    <% end %>
+                  <% else %>
+                    <%= render '/categories/newcall' %>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="v-pills-goals" role="tabpanel" aria-labelledby="v-pills-goals-tab">test3</div>
   </div>
 </div>
+<%= render '/categories/modal' %>
 
-<%= render '/shared/expensecategory', category: @category %>
 

@@ -1,22 +1,17 @@
 
-<div class="card-expcat-container">
+<%# <div class="card-expcat-container"> %>
 
-  <div class="card-expcat-title">
-    <h3>Expense categories</h3>
-    <%= link_to "Add category", new_category_path %>
-  </div>
 
   <div class="card-framework">
 
     <div class="layout-container">
-      <div class="category-logo-container">
-        <%= image_tag "coffee.png", alt: "card_category_name", style: 'height:40px;'%>
+      <div class="category-logo-container" style="background-image:url(<%= asset_path category.name.downcase %>)">
       </div>
 
       <div class="exp-cat-card-mid">
         <div class="text-x-progressbar">
-          <p>Coffee</p>
-          <p>50%</p>
+          <p><%= category.name.capitalize %></p>
+          <p><%= category.spent_percentage  %></p>
         </div>
         <div class="progress-barz"></div>
       </div>
@@ -43,4 +38,4 @@
 
   <hr>
 
-</div>
+<%# </div> %>
