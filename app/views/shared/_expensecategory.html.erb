@@ -1,8 +1,10 @@
 
+<%# <div class="card-expcat-container"> %>
 
   <div class="card-framework">
 
     <div class="layout-container">
+
       <div class="category-logo-container">
          <% if category.name == "Meals" %>
           <%= image_tag "lunch.svg", style: 'height:40px;'%>
@@ -17,12 +19,15 @@
           <% elsif category.name == "Shopping" %>
           <%= image_tag "online-shopping.svg", style: 'height:40px;'%>
           <% end  %>
+
+<!--       <div class="category-logo-container" style="background-image:url(<%= asset_path category.name.downcase %>)"> -->
+
       </div>
 
       <div class="exp-cat-card-mid">
         <div class="text-x-progressbar">
-          <p><%=category.name %></p>
-          <p><%=category.spent_percentage %>%</p>
+          <p><%= category.name.capitalize %></p>
+          <p><%= category.spent_percentage  %></p>
         </div>
         <div class="progress-barz"></div>
       </div>
@@ -48,4 +53,6 @@
   </div>
  <hr>
 
+
+<%# </div> %>
 

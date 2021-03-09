@@ -35,7 +35,6 @@ class GoalsController < ApplicationController
     @goal = Goal.find(params[:id])
     @goal.update(goal_params)
     redirect_to goal_path, notice: 'Goal was successfully updated!'
-
   end
 
   # destroy
