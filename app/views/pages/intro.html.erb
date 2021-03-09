@@ -1,10 +1,10 @@
 <div class="i-container text-center">
   <div class="d-flex justify-content-between">
-    <div class="i-header text-left half-screen">
-      <h1 class="logo font-weight-bold">SimpleSaver</h1>
+    <div class="text-left half-screen">
+      <h1 class="logo font-weight-bold">SimpleSaver</h1><br>
       <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for     previewing   layouts and visual mockups.</p>
     </div>
-    <%= image_tag "i-screen.png", height: "300px", class: "half-screen img-right img-shadow" %>
+    <%= image_tag "i-screen.png", height: "350px" %>
   </div>
 </div>
 
@@ -13,15 +13,15 @@
       <h2 class="pb-4">Save automatically and reach your financial goals<br> in 3 simple steps!</h2>
       <div class="d-flex justify-content-between align-items-center mt-5">
         <div class="i-step">
-          <i class="fas fa-bullseye"></i>
-          <h5 class="font-weight-bold">Set a goal</h5>
-        </div>
-        <div class="i-step">
-          <i class="fas fa-wallet"></i>
+          <%= image_tag "SimpleSaverMoney.svg", height: "60px", class: "mb-2 icon-bw" %>
           <h5 class="font-weight-bold">Add a budget</h5>
         </div>
         <div class="i-step">
-          <i class="fas fa-money-check-alt"></i>
+          <%= image_tag "SimpleSaverTarget.svg", height: "60px", class: "mb-2 icon-bw" %>
+          <h5 class="font-weight-bold">Set a goal</h5>
+        </div>
+        <div class="i-step">
+          <%= image_tag "SimpleSaverPiggy.svg", height: "60px", class: "mb-2 icon-bw" %>
           <h5 class="font-weight-bold">Save the difference</h5>
         </div>
       </div>

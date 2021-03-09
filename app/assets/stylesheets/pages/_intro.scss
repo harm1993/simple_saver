@@ -3,10 +3,6 @@
   margin: 80px auto 50px auto;
 }
 
-.i-header {
-  margin-top: 80px;
-}
-
 .half-screen {
   flex: 1;
 }
@@ -48,3 +44,11 @@
   filter: drop-shadow(10px 6px 4px lightgrey);
   -webkit-filter: drop-shadow(10px 6px 4px lightgrey);
 }
+
+.icon-bw {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+// >>Temporary makes icons black and white
+// Remove when icons are changed
