@@ -5,12 +5,10 @@ const initProgressBar = () => {
     if (!container.querySelector('svg')) {
       if (container.dataset.type === 'line') {
         var bar = new ProgressBar.Line(container, {
-          strokeWidth: 6,
           easing: 'easeInOut',
           duration: 1400,
-          color: '#EEE',
-          trailColor: '#EEE',
-          trailWidth: 5,
+          color: '#C6C9D3',
+          trailColor: '#C6C9D3',
           svgStyle: { width: '100%', height: '100%' },
           from: { color: '#bfff00' },
           to: { color: '#ff0000' },
