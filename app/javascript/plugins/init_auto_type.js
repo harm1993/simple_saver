@@ -1,6 +1,6 @@
 import TypeIt from "typeit";
 
-const initAutoType = () => { 
+const initAutoType = () => {
   new TypeIt("#type-1", {
     strings: "1. Set categories",
     speed: 75,
