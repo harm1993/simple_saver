@@ -1,7 +1,14 @@
 <div class="form-container">
   <%= simple_form_for(category) do |f| %>
-     <%= f.input :name %>
-     <%= f.input :goal_per_month, label: "average expense to date" %>
-    <%= f.submit class: "s-button"%>
+     <%= f.input :name,
+            as: :radio_buttons,
+            collection_wrapper_tag: 'div',
+            collection_wrapper_class: 'category-wrapper',
+            item_wrapper_class: 'category-item',
+            input_html: {class: 'category-selector'},
+            collection: Category::CATEGORIES_NAMES%>
+     <%= f.input :goal_per_month, label: "Monthly average expense" %>
+    <%= f.button :submit, "Save", class: "s-button"%>
   <% end %>
 </div>
+
