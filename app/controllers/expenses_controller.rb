@@ -16,11 +16,17 @@ class ExpensesController < ApplicationController
     @category = Category.find(params[:category_id])
     @expense = Expense.new(expense_params)
     @expense.category = @category
-    if @expense.save
-      redirect_to category_path(@category), notice: 'Expense was successfully created!'
-    else
-      render :new
+    respond_to do |format|
+      if @expense.save
+        format.html { redirect_to root_path, notice: 'Expense was successfully created!'}
+        format.js { redirect_to root_path, notice: 'Expense was successfully created!'}
+      else
+        format.html { render :new}
+        format.js { }
+      end
     end
+
+
   end
 
   def edit

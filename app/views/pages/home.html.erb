@@ -5,7 +5,7 @@
       <h1>Overview</h1>
       <!-- <h5>$90.000,00</h5> -->
     </div>
-    <button type="button" class="s-button" data-toggle="modal" data-target="#categoryModal">
+    <button type="button" class="s-button" data-toggle="modal" data-target="#categoryModal-new">
   Add category
 </button>
 <%= render '/categories/modal' %>
@@ -20,17 +20,11 @@
         <p> <%= link_to "Add goal", new_goal_path, class: "s-button" %> </p>
       <% end %>
     </div>
+    </div>
 
-    <div class="categories-dashboard">
-      <h2 class="ml-4">Expense Categories</h2>
       <% if @categories.exists? %>
         <%= render '/categories/index', categories: @categories %>
       <% else %>
         <%= render '/categories/newcall' %>
       <% end %>
-    </div>
-  </div>
 </div>
-
-<%= render '/shared/expensecategory', category: @category %>
-

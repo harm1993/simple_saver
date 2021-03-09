@@ -1,4 +1,16 @@
-<div class="categories"> <% categories.each do |category| %>
-    <%= render 'shared/card', category: category%>
-  <% end %>
-</div>
+
+  <div class="card-expcat-container">
+
+      <div class="card-expcat-title">
+        <h3>Expense categories</h3>
+        <href type="button" style="color:#2A50E9" data-toggle="modal" data-target="#categoryModal-new">
+      Add category
+    </href>
+      </div>
+
+    <div class="categories"> <% categories.each do |category| %>
+        <%= render 'shared/expensecategory', category: category%>
+      <% end %>
+    </div>
+
+    </div>

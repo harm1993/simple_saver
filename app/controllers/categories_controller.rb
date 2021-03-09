@@ -12,25 +12,29 @@ class CategoriesController < ApplicationController
     @user = current_user
     @category = Category.new(category_params)
     @category.user = @user
-    if @category.save
-      redirect_to root_path, notice: 'Category was successfully created!'
-    else
-      render :new
+    respond_to do |format|
+      if @category.save
+        format.html { redirect_to root_path, notice: 'Category was successfully created!'}
+        format.js { redirect_to root_path, notice: 'Category was successfully created!'}
+      else
+        format.html { render :new}
+        format.js { }
+      end
     end
   end
 
   def edit
-    @category = Category.find(params[:id])
+    @category = current_user.categories.find(params[:id])
   end
 
   def update
-    @category = Category.find(params[:id])
+    @category = current_user.categories.find(params[:id])
     @category.update(category_params)
     redirect_to root_path, notice: 'Category was successfully updated!'
   end
 
   def destroy
-    @category = Category.find(params[:id])
+    @category = current_user.categories.find(params[:id])
     @category.destroy
     redirect_to root_path, notice: 'Category was successfully deleted!'
   end
