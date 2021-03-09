@@ -3,16 +3,10 @@
  <div class="sidebar">
     <div class="text-center" id="logo-dashboard"><%= image_tag "simpleSLogo.png", width: "90px" %></div>
     <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-      <a class="nav-link" id="v-pills-overview-tab" data-toggle="pill" href="#v-pills-overview" role="tab" aria-controls="v-pills-overview" aria-selected="false"><%= image_tag "compass_icon.svg", width: "25px" %>Overview</a>
+      <a class="nav-link active" id="v-pills-overview-tab" data-toggle="pill" href="#v-pills-overview" role="tab" aria-controls="v-pills-overview" aria-selected="false"><%= image_tag "compass_icon.svg", width: "25px" %>Overview</a>
       <a class="nav-link" id="v-pills-goals-tab" data-toggle="pill" href="#v-pills-goals" role="tab" aria-controls="v-pills-goals" aria-selected="false"><%= image_tag "target_icon.svg", width: "25px" %>Goals</a>
-      <a class="nav-link active" id="v-pills-statistics-tab" data-toggle="pill" href="#v-pills-statistics" role="tab" aria-controls="v-pills-statistics" aria-selected="true"><%= image_tag "graph_icon.svg", width: "25px" %>Statistics</a>
+      <a class="nav-link" id="v-pills-statistics-tab" data-toggle="pill" href="#v-pills-statistics" role="tab" aria-controls="v-pills-statistics" aria-selected="true"><%= image_tag "graph_icon.svg", width: "25px" %>Statistics</a>
     </div>
-    <button type="button" class="s-button" data-toggle="modal" data-target="#categoryModal-new">
-  Add category
-</button>
-<%= render '/categories/modal' %>
-  </div>
-
   </div>
 
   <div class="dashboard-content">
@@ -33,7 +27,7 @@
               </div>
             </div>
             <div class="col-12 col-sm-6">
-              <%= image_tag "dash-coach.png", height: "60%", class: "img-shadow" %>
+              <%= image_tag "dash-coach.png", height: "300px", class: "img-shadow" %>
             </div>
           </div>
             <div class="row">
@@ -41,7 +35,7 @@
                 <div class="dashboard-card">
                   <div class="card-expcat-title">
                     <h3>Expense categories</h3>
-                    <a href="#" data-toggle="modal" data-target="#categoryModal">Add category</a>
+                    <a href="#" data-toggle="modal" data-target="#categoryModal-new">Add category</a>
                   </div>
                   <% if @categories.exists? %>
                     <% @categories.each do |category| %>

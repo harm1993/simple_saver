@@ -62,7 +62,18 @@ a, a:hover {
 
 .sidebar {
   width: 350px;
+  .nav-link {
+    color: $ss-grey;
+    &.active {
+      color: $ss-blue;
+      background-color: transparent;
+    }
+    img {
+      margin-right: 10px;
+    }
+  }
 }
+
 
 .dashboard-content {
   flex-grow: 1;
