@@ -5,7 +5,10 @@
       <h1>Overview</h1>
       <!-- <h5>$90.000,00</h5> -->
     </div>
-    <%= link_to "Add category", new_category_path, class: "s-button" %>
+    <button type="button" class="s-button" data-toggle="modal" data-target="#categoryModal">
+  Add category
+</button>
+<%= render '/categories/modal' %>
   </div>
 
   <div class="dashboard-container text-left">

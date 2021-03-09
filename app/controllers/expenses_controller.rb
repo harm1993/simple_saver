@@ -4,6 +4,7 @@ class ExpensesController < ApplicationController
   def index
     @category = current_user.categories.find(params[:id])
     @expenses = @category.expenses
+    @expense = Expense.new
   end
 
   def new
@@ -31,7 +32,7 @@ class ExpensesController < ApplicationController
     @expense.update(expense_params)
     redirect_to category_path(@expense.category), notice: 'Expense was successfully updated!'
   end
-  
+
   def destroy
     @expense = Expense.find(params[:id])
     @expense.destroy
