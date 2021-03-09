@@ -23,13 +23,12 @@
 <!--       <div class="category-logo-container" style="background-image:url(<%= asset_path category.name.downcase %>)"> -->
 
       </div>
-
       <div class="exp-cat-card-mid">
         <div class="text-x-progressbar">
           <p><%= category.name.capitalize %></p>
-          <p><%= category.spent_percentage  %></p>
+          <p><%= (category.spent_percentage * 100).to_i %>%</p>
         </div>
-        <div class="progress-barz"></div>
+        <div class="state-bar" data-type="line" data-percentage="<%= category.spent_percentage %>"></div>
       </div>
     </div>
 
