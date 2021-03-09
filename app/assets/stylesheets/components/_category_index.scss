@@ -1,8 +1,7 @@
 .categories {
-  height: 50vh;
   scroll-snap-type: y mandatory;
-  // overflow: scroll;
   overflow-y: scroll;
+  height: 25vh;
 }
 
 .snap-target {

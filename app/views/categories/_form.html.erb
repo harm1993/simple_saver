@@ -1,5 +1,5 @@
 <div class="form-container">
-  <%= simple_form_for(category) do |f| %>
+  <%= simple_form_for(category, remote: true) do |f| %>
      <%= f.input :name,
             as: :radio_buttons,
             collection_wrapper_tag: 'div',
@@ -8,7 +8,7 @@
             input_html: {class: 'category-selector'},
             collection: Category::CATEGORIES_NAMES%>
      <%= f.input :goal_per_month, label: "Monthly average expense" %>
-    <%= f.button :submit, "Save", class: "s-button"%>
+    <%= f.button :submit, "Save my category", class: "s-button"%>
   <% end %>
 </div>
 

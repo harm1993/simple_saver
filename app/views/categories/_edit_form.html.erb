@@ -1,0 +1,7 @@
+<div class="form-container">
+  <%= simple_form_for(category, remote: true) do |f| %>
+     <%= f.input :goal_per_month, label: "Monthly average expense" %>
+    <%= f.button :submit, "Save my category", class: "s-button"%>
+  <% end %>
+</div>
+
