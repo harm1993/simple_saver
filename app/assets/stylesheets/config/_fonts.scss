@@ -18,3 +18,12 @@ $s-font: 'Ubuntu', "sans-serif";
 //        font-url('FontFile.ttf') format('truetype')
 // }
 // $my-font: "Font Name";
+h1 {
+    color: $blue;
+    font-weight: 700 !important;
+}
+
+h2 {
+    font-size: 24px;
+    color: black;
+}
