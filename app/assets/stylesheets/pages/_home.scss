@@ -79,3 +79,8 @@ a, a:hover {
 #logo-dashboard {
   margin-top: 25px;
 }
+
+.img-shadow {
+  filter: drop-shadow(10px 6px 4px lightgrey);
+  -webkit-filter: drop-shadow(10px 6px 4px lightgrey);
+}
