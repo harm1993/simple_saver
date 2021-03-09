@@ -31,7 +31,7 @@
 <div class="i-container text-center">
   <div class="d-flex justify-content-between align-items-center">
     <div class="i-text text-left half-screen">
-      <h3 class="font-weight-bold mt-2">1. Set categories</h3>
+      <h3 class="font-weight-bold mt-2" id="type-1"></h3>
       <p>First select an expense category you would like to track. Maybe coffee?</p>
       <p>You choose to track your expenses monthly, for a weekend or as long as you want.</p>
       <p>Set a budget you think you can beat. Be sure it’s a challenge. </p>
@@ -43,7 +43,7 @@
   <div class="d-flex justify-content-between">
     <%= image_tag "i-couch.png", height: "200px", class: "half-screen img-left img-shadow" %>
     <div class="i-text text-left half-screen ml-5">
-      <h3 class="font-weight-bold mt-2">2. Set your goal</h3>
+      <h3 class="font-weight-bold mt-2" id="type-2"></h3>
       <p>Continue by choosing a goal you want to save towards, and set a budget.</p>
       <p>Saving is easier, fun and rewarding when you know what you're doing it for.</p>
       <p>Your goal can be antyhing. How does a gap year in Australia sounds like?</p>
@@ -55,10 +55,10 @@
     <div class="i-text text-left half-screen">
       <p>Your setup is done! Simplesaver will track your spending and provide feedback to help you stick with your goals.</p>
       <p>Saving has never been easier! Click on the button below to kickstart your account and start your journey. </p>
-      <h3 class="call font-weight-bold mt-5">Happy saving!</h3>
+      <h3 class="call font-weight-bold mt-5" id="type-hs"></h3>
     </div>
     <%= image_tag "i-party.png", height: "200px", class: "half-screen img-right img-shadow" %>
   </div>
 
-  <%= link_to "Start saving!", new_user_session_path, class: "start_saving s-button confetti-button" %>
+  <%= link_to "Start saving!", new_user_session_path, class: "start_saving s-button confetti-button img-shadow" %>
 </div>
