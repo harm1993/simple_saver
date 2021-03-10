@@ -1,0 +1,78 @@
+
+.stats-top-container {
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.stats-left-top-container {
+  width: 45%;
+  margin-right: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 5% 0;
+}
+
+.stats-container {
+  background-color: blue;
+  width: 100%;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+
+// Coaching
+
+.coach-text-bubble {
+  background-color: yellow;
+  position: relative;
+  left: 50%;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.coach-avatar {
+  position: relative;
+  bottom: 10%;
+}
+
+
+// Goal details
+
+.goal-details-container {
+  height: 50%;
+  width: 95%;
+  margin: 0 auto;
+  background-color: green;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+}
+
+.goal-details-text {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    list-style: none;
+    margin-bottom: 7px;
+  }
+  .icons-container {
+    justify-content: space-around;
+  }
+}
+
+.goal-details-statusgraph {
+  width: 50%;
+}
+
+
+
+
