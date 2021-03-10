@@ -59,6 +59,7 @@
     </div>
     <%= image_tag "intro-party.png", height: "200px", class: "half-screen img-right img-shadow" %>
   </div>
-
-  <%= link_to "Start saving!", new_user_session_path, class: "start_saving s-button confetti-button img-shadow" %>
+    <a href="#" data-toggle="modal" data-target="#loginModal-new" class="start_saving s-button confetti-button img-shadow" >Start saving!</a>
 </div>
+
+<%= render 'pages/modal_login' %>
