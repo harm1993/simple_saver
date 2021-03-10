@@ -33,16 +33,15 @@ class ExpensesController < ApplicationController
     @expense = Expense.find(params[:id])
   end
 
-  def update
-    @expense = Expense.find(params[:id])
-    @expense.update(expense_params)
-    redirect_to category_path(@expense.category), notice: 'Expense was successfully updated!'
-  end
+  # def update
+  #   @expense = Expense.find(params[:id])
+  #   @expense.update(expense_params)
+  # end
 
   def destroy
     @expense = Expense.find(params[:id])
     @expense.destroy
-    redirect_to category_path(@expense.category), notice: 'Expense was successfully deleted!'
+    redirect_to root_path, notice: 'Expense was successfully deleted!'
   end
 
   private

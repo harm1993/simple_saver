@@ -1,8 +1,8 @@
-<div class="modal fade" id="expenseModal-index" tabindex="-1" role="dialog" aria-labelledby="expenseIndex" aria-hidden="true">
+<div class="modal fade" id="expenseModal-index-<%= category.id %>" tabindex="-1" role="dialog" aria-labelledby="expenseIndex" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="expenseIndex">Add category</h5>
+        <h5 class="modal-title mb-2" id="expenseIndex"><%= category.name.capitalize %> expenses</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -13,19 +13,19 @@
             <div class="exp-details mr-3">
               <% category.expenses.each do |expense| %>
                 <div class="d-flex justify-content-between snap-target">
-                  <h4><%= expense.place.capitalize %></h4>
-                  <h4><strong>-<%= expense.amount %>€</strong></h4>
+                  <p class="medium"><strong><%= expense.place.capitalize %></strong></p>
+                  <p class="medium"><strong>-<%= expense.amount.to_i %>€</strong></p>
                 </div>
                 <div class="d-flex justify-content-between">
-                  <p>Done on <%= expense.date %></p>
-                </div>
-                <div class="comands text-left">
-                  <%= link_to edit_expense_path(expense) do %>
-                    <i class="fas fa-pencil-alt fa-xs"></i>
-                  <% end %>
-                  <%= link_to expense_path(expense), method: :delete do %>
-                    <i class="fas fa-trash-alt fa-xs"></i>
-                  <% end %>
+                  <p class="small">Done on <%= expense.date %></p>
+                  <div class="comands">
+                    <%#= link_to edit_expense_path(expense) do %>
+                      <%#= image_tag "edit.svg", alt: "edit button", style: 'height:15px;' %>
+                    <%# end %>
+                    <%= link_to expense_path(expense), method: :delete do %>
+                      <%= image_tag "trash.svg", alt: "delete button", style: 'height:15px;' %>
+                    <% end %>
+                  </div>
                 </div>
                 <hr>
               <% end %>

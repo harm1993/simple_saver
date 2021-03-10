@@ -25,7 +25,7 @@
       </div>
       <div class="exp-cat-card-mid">
         <div class="text-x-progressbar">
-          <a href="#" data-toggle="modal" data-target="#expenseModal-index"><p><%= category.name.capitalize %></p></a>
+          <a href="#" data-toggle="modal" data-target="#expenseModal-index-<%= category.id %>"><p><%= category.name.capitalize %> 🛈</p></a>
           <p><%= (category.spent_percentage * 100).to_i %>%</p>
         </div>
         <div class="state-bar" data-type="line" data-percentage="<%= category.spent_percentage %>"></div>
@@ -39,11 +39,11 @@
       </href>
 
        <href type="button" data-toggle="modal" data-target="#editCategoryModal-<%=category.id%>">
-        <%= image_tag "edit.svg", alt: "add button", style: 'height:25px;' %>
+        <%= image_tag "edit.svg", alt: "edit button", style: 'height:25px;' %>
         </href>
 
       <%= link_to category_path(category), method: :delete do %>
-        <%= image_tag "trash.svg", alt: "add button", style: 'height:23px; margin-top: 2px;' %>
+        <%= image_tag "trash.svg", alt: "delete button", style: 'height:23px; margin-top: 2px;' %>
       <% end %>
 
     </div>

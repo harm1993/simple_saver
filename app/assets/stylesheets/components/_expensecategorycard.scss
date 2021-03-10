@@ -22,6 +22,9 @@
 .card-framework {
   display: flex;
   justify-content: space-between;
+  p {
+    color: black;
+  }
 }
 
 .card-framework:last-of-type + hr {
