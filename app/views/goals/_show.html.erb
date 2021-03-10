@@ -1,4 +1,4 @@
-<h2>50% <%= goal.name %></h2>
+<h2><%= (goal.percentage * 100).round %>% of <%= goal.name %></h2>
 <div class="d-flex justify-content-between">
   <p>
     <%= goal.saved %> / <%= goal.amount %>
