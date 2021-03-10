@@ -72,3 +72,12 @@
   border-radius: 20px;
   padding: 25px;
 }
+
+#category-card {
+  height: 355px;
+  overflow-y: scroll;
+}
+
+#category-card svg {
+  height: 10px !important;
+}

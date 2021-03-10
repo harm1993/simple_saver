@@ -4,8 +4,8 @@
     <div class="text-center" id="logo-dashboard"><%= image_tag "simpleSLogo.png", width: "90px" %></div>
     <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
       <a class="nav-link active" id="v-pills-overview-tab" data-toggle="pill" href="#v-pills-overview" role="tab" aria-controls="v-pills-overview" aria-selected="false"><%= image_tag "compass_icon.svg", width: "25px" %>Overview</a>
-      <a class="nav-link" id="v-pills-goals-tab" data-toggle="pill" href="#v-pills-goals" role="tab" aria-controls="v-pills-goals" aria-selected="false"><%= image_tag "target_icon.svg", width: "25px" %>Goals</a>
       <a class="nav-link" id="v-pills-statistics-tab" data-toggle="pill" href="#v-pills-statistics" role="tab" aria-controls="v-pills-statistics" aria-selected="true"><%= image_tag "graph_icon.svg", width: "25px" %>Statistics</a>
+      <a class="nav-link" id="v-pills-account-tab" data-toggle="pill" href="#v-pills-account" role="tab" aria-controls="v-pills-account" aria-selected="false"><%= image_tag "target_icon.svg", width: "25px" %>Account</a>
     </div>
   </div>
 
@@ -18,7 +18,6 @@
           <div class="row mb-3">
             <div class="col-12 col-sm-6">
               <div class="dashboard-card" id="saving-chart">
-
                 <% if @current_goal %>
                   <%= render '/goals/show', goal: @current_goal %>
                 <% else %>
@@ -32,7 +31,7 @@
           </div>
             <div class="row">
               <div class="col-12">
-                <div class="dashboard-card">
+                <div class="dashboard-card" id="category-card">
                   <div class="card-expcat-title">
                     <h3>Expense categories</h3>
                     <a href="#" data-toggle="modal" data-target="#categoryModal-new">Add category</a>
@@ -49,7 +48,7 @@
             </div>
         </div>
       </div>
-      <div class="tab-pane fade" id="v-pills-goals" role="tabpanel" aria-labelledby="v-pills-goals-tab">test3</div>
+      <div class="tab-pane fade" id="v-pills-account" role="tabpanel" aria-labelledby="v-pills-account-tab"><%= render 'devise/registrations/edit', resource: resource %></div>
   </div>
 </div>
 <%= render '/categories/modal' %>
