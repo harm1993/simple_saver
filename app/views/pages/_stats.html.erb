@@ -10,12 +10,21 @@
     <div class="stats-container">
 
       <h3>Potential saving</h3>
-      <h3>€ <span><%= current_user.saving_potential %></span></h3>
+      <% if current_user.categories.exists? %>
+        <h3>€ <span><%= current_user.saving_potential %></span></h3>
+      <% else %>
+        <h3><span>No data yet</span></h3>
+      <% end %>
     </div>
 
     <div class="stats-container">
       <h3>Budget spend</h3>
-      <h3><span><%= 100 - current_user.overall_progress %></span> %</h3>
+      <% if current_user.categories.exists? %>
+        <h3><span><%= 100 - current_user.overall_progress %></span> %</h3>
+      <% else %>
+        <h3><span>No data yet</span></h3>
+      <% end %>
+
     </div>
 
   </div>
@@ -45,32 +54,49 @@
 
 <div class="goal-details-container">
 
-  <div class="goal-details-text">
-    <h3><span><%= current_user.percentage_goal %></span>% of <%= current_user.current_goal.name.capitalize %> </h3>
-    <ul>
-      <li>Created at: <%= current_user.current_goal.created_at.strftime("%d-%m-%Y") %></li>
-      <li>Deadline: <%= current_user.current_goal.deadline %></li>
-      <li>Status: <%= current_user.current_goal.completed %></li>
-    </ul>
-
-    <div class="icons-container">
-      <%= link_to edit_goal_path(current_user.current_goal) do %>
-        <%= image_tag "edit.svg", alt: "add button", style: 'height:25px;' %>
-      <% end %>
-      <%= link_to goal_path(current_user.current_goal), method: :delete do %>
-        <%= image_tag "trash.svg", alt: "add button", style: 'height:23px; margin-top: 2px;' %>
-      <% end %>
-    </div>
-
-  </div>
-
-  <div class="goal-details-statusgraph">
     <% if current_user.current_goal %>
-      <div class="state-bar" data-type="circle" data-percentage="<%= current_user.current_goal.percentage %>"></div>
+
+      <div class="goal-details-text">
+        <h3><span><%= current_user.percentage_goal %></span>% of <%= current_user.current_goal.name.capitalize %> </h3>
+        <ul>
+          <li>Created at: <%= current_user.current_goal.created_at.strftime("%d-%m-%Y") %></li>
+          <li>Deadline: <%= current_user.current_goal.deadline %></li>
+          <li>Status: <%= current_user.current_goal.completed %></li>
+        </ul>
+
+        <div class="icons-container">
+          <%= link_to edit_goal_path(current_user.current_goal) do %>
+            <%= image_tag "edit.svg", alt: "add button", style: 'height:25px;' %>
+          <% end %>
+          <%= link_to goal_path(current_user.current_goal), method: :delete do %>
+            <%= image_tag "trash.svg", alt: "add button", style: 'height:23px; margin-top: 2px;' %>
+          <% end %>
+        </div>
+
+      </div>
+
+      <div class="goal-details-statusgraph">
+
+          <% if current_user.current_goal %>
+            <div class="state-bar" data-type="circle" data-percentage="<%= current_user.current_goal.percentage %>"></div>
+          <% else %>
+            <p> <%= link_to "Add goal", new_goal_path, class: "s-button" %> </p>
+          <% end %>
+
+      </div>
+
     <% else %>
-      <p> <%= link_to "Add goal", new_goal_path, class: "s-button" %> </p>
+
+      <div class="no-goal-text">
+
+        <h1>You did not set a goal yet. Lets start saving right now!</h1>
+        <br>
+        <br>
+        <%= link_to "Set goal", new_goal_path, class: "s-button" %>
+      </div>
+
     <% end %>
-  </div>
+
 
 </div>
 

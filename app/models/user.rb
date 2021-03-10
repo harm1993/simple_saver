@@ -58,8 +58,10 @@ class User < ApplicationRecord
       "reckless-spender"
     elsif spenditure_status > 10
       "super-saver"
-    else
+    elsif spenditure_status > - 10 && spenditure_status < 10
       "responsible-spender"
+    else
+      "no categories"
     end
   end
 
@@ -71,7 +73,7 @@ class User < ApplicationRecord
       "You're on the right track!"
     when "super-saver"
       "Wow, amazing this way your goal is reached super fast"
-    else
+    when "no categories"
       "There are no categories yet."
     end
   end
