@@ -1,6 +1,7 @@
 import TypeIt from "typeit";
 
 const initAutoType = () => {
+  if (document.getElementById('type-1')) {
   new TypeIt("#type-1", {
     strings: "1. Set categories",
     speed: 75,
@@ -17,7 +18,7 @@ const initAutoType = () => {
     strings: "Happy saving!",
     speed: 75,
     waitUntilVisible: true
-  }).go();
+  }).go(); }
 }
 
 export { initAutoType }
