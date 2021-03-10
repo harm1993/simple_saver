@@ -18,13 +18,16 @@ class GoalsController < ApplicationController
     @user = current_user
     @goal = Goal.new(goal_params)
     @goal.user = @user
-    if @goal.save
-      redirect_to goals_path
-    else
-      render :new
+    respond_to do |format|
+      if @goal.save
+        format.html { redirect_to root_path, notice: 'Goal was successfully created!'}
+        format.js { redirect_to root_path, notice: 'Goal was successfully created!'}
+      else
+        format.html { render :new}
+        format.js { }
+      end
     end
   end
-
   # edit
 
   def edit

@@ -1,0 +1,39 @@
+.modal-content {
+  border-radius: 20px;
+  align-items: center;
+}
+
+.modal-title {
+  font-weight: bold;
+  text-align: center;
+  font-size: 24px !important;
+}
+
+.close {
+  align-text: right !important;
+}
+
+.form-container {
+  margin-bottom: 0px !important;
+}
+
+.modal-header {
+  border: none !important;
+  position: relative;
+  display: block;
+  width: 100%;
+    button.close {
+        position: absolute;
+        right: 15px;
+        top: 10px;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.form-container .s-button {
+  width: auto;
+  // text-align: center !important;
+  margin: 10px auto;
+  display: block;
+}

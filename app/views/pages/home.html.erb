@@ -7,6 +7,8 @@
       <a class="nav-link" id="v-pills-goals-tab" data-toggle="pill" href="#v-pills-goals" role="tab" aria-controls="v-pills-goals" aria-selected="false"><%= image_tag "target_icon.svg", width: "25px" %>Goals</a>
       <a class="nav-link" id="v-pills-statistics-tab" data-toggle="pill" href="#v-pills-statistics" role="tab" aria-controls="v-pills-statistics" aria-selected="true"><%= image_tag "graph_icon.svg", width: "25px" %>Statistics</a>
     </div>
+    <a href="#" data-toggle="modal" data-target="#goalModal-new">Add goal</a>
+
   </div>
 
   <div class="dashboard-content">
@@ -53,4 +55,5 @@
   </div>
 </div>
 <%= render '/categories/modal' %>
+<%= render '/goals/modal' %>
 
