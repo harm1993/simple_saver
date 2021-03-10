@@ -1,15 +1,13 @@
-
 <div class="dashboard-container">
  <div class="sidebar">
     <div class="text-center" id="logo-dashboard"><%= image_tag "simpleSLogo.png", width: "90px" %></div>
-    <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-      <a class="nav-link active" id="v-pills-overview-tab" data-toggle="pill" href="#v-pills-overview" role="tab" aria-controls="v-pills-overview" aria-selected="false"><%= image_tag "compass_icon.svg", width: "25px" %>Overview</a>
-      <a class="nav-link" id="v-pills-statistics-tab" data-toggle="pill" href="#v-pills-statistics" role="tab" aria-controls="v-pills-statistics" aria-selected="true"><%= image_tag "graph_icon.svg", width: "25px" %>Statistics</a>
-      <a class="nav-link" id="v-pills-account-tab" data-toggle="pill" href="#v-pills-account" role="tab" aria-controls="v-pills-account" aria-selected="false"><%= image_tag "target_icon.svg", width: "25px" %>Account</a>
+    <div class="nav flex-column nav-pills text-center" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+      <a class="nav-link active" id="v-pills-overview-tab" data-toggle="pill" href="#v-pills-overview" role="tab" aria-controls="v-pills-overview" aria-selected="false"><i class="fas fa-compass fa-lg pr-1"></i>Overview</a>
+      <a class="nav-link" id="v-pills-statistics-tab" data-toggle="pill" href="#v-pills-statistics" role="tab" aria-controls="v-pills-statistics" aria-selected="true"><i class="fas fa-chart-pie fa-lg pr-1"></i>Statistics</a>
+      <a class="nav-link" id="v-pills-account-tab" data-toggle="pill" href="#v-pills-account" role="tab" aria-controls="v-pills-account" aria-selected="false"><i class="fas fa-user-circle fa-lg pr-1"></i>Account</a>
     </div>
     <a href="#" data-toggle="modal" data-target="#goalModal-new">Add goal</a><br>
     <%= link_to "Log out", destroy_user_session_path, method: :delete %>
-
   </div>
 
   <div class="dashboard-content">
@@ -57,3 +55,10 @@
 <%= render '/categories/modal' %>
 <%= render '/goals/modal' %>
 
+
+
+<%# >> Code for old icons in sidebar %>
+
+<%# <a class="nav-link active" id="v-pills-overview-tab" data-toggle="pill" href="#v-pills-overview" role="tab" aria-controls="v-pills-overview" aria-selected="false">= image_tag "compass_icon.svg", width: "25px" %>Overview</a>
+<%# <a class="nav-link" id="v-pills-statistics-tab" data-toggle="pill" href="#v-pills-statistics" role="tab" aria-controls="v-pills-statistics" aria-selected="true">= image_tag "graph_icon.svg", width: "25px" %>Statistics</a>
+<%# <a class="nav-link" id="v-pills-account-tab" data-toggle="pill" href="#v-pills-account" role="tab" aria-controls="v-pills-account" aria-selected="false">= image_tag "target_icon.svg", width: "25px" %>Account</a>

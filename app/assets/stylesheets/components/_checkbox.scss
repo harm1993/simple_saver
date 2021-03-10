@@ -14,8 +14,8 @@
 }
 
 .category-selector + label {
-  color: $s-blue;
-  border-color: $s-orange;
+  color: $ss-blue;
+  border-color: $ss-purple;
   display: block;
   cursor: pointer;
   box-sizing: border-box;
@@ -32,7 +32,7 @@
 }
 
 .category-selector:checked + label {
-  background-color: $s-orange !important;
+  background-color: $ss-purple !important;
   color: white !important;
 
 }
