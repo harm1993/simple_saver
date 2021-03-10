@@ -1,5 +1,5 @@
 <div class="form-container">
-  <%= simple_form_for(goal) do |f| %>
+  <%= simple_form_for(goal, remote: true) do |f| %>
     <%= f.input :name, label: 'What are you saving for?' %>
     <%= f.input :amount, label: 'How much do you want to save?' %>
     <%= f.input :deadline, label: 'When do you want to reach this goal?' %>
@@ -7,3 +7,4 @@
     <%= f.submit class: "s-button"%>
   <% end %>
 </div>
+
