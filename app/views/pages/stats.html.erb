@@ -3,35 +3,45 @@
 
 <!-- Statistics -->
 
-<h3>Potential saving</h3>
-€<%= current_user.saving_potential %>
+<div class="stats-top-container">
 
-<br>
+  <div class="stats-left-top-container">
 
-<h3>Budget spend</h3>
-<%= 100 - current_user.overall_progress %>%
+    <div class="stats-container">
+      <h3>Potential saving</h3>
+      €<%= current_user.saving_potential %>
+    </div>
 
-<br>
+    <br>
 
-<!-- Coach -->
+    <div class="stats-container">
+      <h3>Budget spend</h3>
+      <%= 100 - current_user.overall_progress %>%
+    </div>
 
-<h3>Finance coach</h3>
-
-<div class="coach-container">
-  <div class="coach-text-bubble">
-    <%= current_user.spending_coach_text %>
   </div>
-  <div class="coach-avatar">
-    <% if current_user.spending_type == "reckless-spender" %>
-      <%= image_tag "reckless_spender.png"%>
-    <% elsif current_user.spending_type == "responsible-spender" %>
-      <%= image_tag "responsible-spender.png"%>
-    <% elsif current_user.spending_type == "super-saver" %>
-      <%= image_tag "super_saver.png"%>
-    <% else %>
-      <%= image_tag "responsible-spender.png"%>
-    <% end %>
-   </div>
+
+  <br>
+
+  <!-- Coach -->
+
+  <div class="coach-container">
+    <div class="coach-text-bubble">
+      <%= current_user.spending_coach_text %>
+    </div>
+    <div class="coach-avatar">
+      <% if current_user.spending_type == "reckless-spender" %>
+        <%= image_tag "reckless_spender.png"%>
+      <% elsif current_user.spending_type == "responsible-spender" %>
+        <%= image_tag "responsible-spender.png"%>
+      <% elsif current_user.spending_type == "super-saver" %>
+        <%= image_tag "super_saver.png"%>
+      <% else %>
+        <%= image_tag "responsible-spender.png"%>
+      <% end %>
+     </div>
+  </div>
+
 </div>
 
 <!-- Goal details -->
