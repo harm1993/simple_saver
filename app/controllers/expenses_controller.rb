@@ -8,12 +8,12 @@ class ExpensesController < ApplicationController
   end
 
   def new
-    @category = Category.find(params[:category_id])
+    @category = current_user.categories.find(params[:category_id])
     @expense = Expense.new
   end
 
   def create
-    @category = Category.find(params[:category_id])
+    @category = current_user.categories.find(params[:category_id])
     @expense = Expense.new(expense_params)
     @expense.category = @category
     respond_to do |format|
