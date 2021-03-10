@@ -7,7 +7,7 @@
     margin-bottom: 60px;
     -webkit-appearance: none;
     appearance: none;
-    background-color: $s-blue;
+    background-color: $ss-blue;
     color: #fff;
     border-radius: 4px;
     border: none;
@@ -34,20 +34,20 @@
   .confetti-button:before {
     display: none;
     top: -75%;
-    background-image: radial-gradient(circle,  $s-blue 20%, transparent 20%), radial-gradient(circle, transparent 20%,  $s-blue 20%, transparent 30%), radial-gradient(circle, #da4471 20%, transparent 20%), radial-gradient(circle,  $s-blue 20%, transparent 20%), radial-gradient(circle, transparent 10%,  $s-blue 15%, transparent 20%), radial-gradient(circle,  #da4471 20%, transparent 20%), radial-gradient(circle,  #da4471 20%, transparent 20%), radial-gradient(circle,  $s-blue 20%, transparent 20%), radial-gradient(circle,  $s-blue 20%, transparent 20%);
+    background-image: radial-gradient(circle,  $ss-blue 20%, transparent 20%), radial-gradient(circle, transparent 20%,  $ss-blue 20%, transparent 30%), radial-gradient(circle, $ss-purple 20%, transparent 20%), radial-gradient(circle,  $ss-blue 20%, transparent 20%), radial-gradient(circle, transparent 10%,  $ss-blue 15%, transparent 20%), radial-gradient(circle,  $ss-purple 20%, transparent 20%), radial-gradient(circle,  $ss-purple 20%, transparent 20%), radial-gradient(circle,  $ss-blue 20%, transparent 20%), radial-gradient(circle,  $ss-blue 20%, transparent 20%);
     background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
   }
 
   .confetti-button:after {
     display: none;
     bottom: -75%;
-    background-image: radial-gradient(circle,  $s-blue 20%, transparent 20%), radial-gradient(circle,  #da4471 20%, transparent 20%), radial-gradient(circle, transparent 10%,  $s-blue 15%, transparent 20%), radial-gradient(circle,  $s-blue 20%, transparent 20%), radial-gradient(circle,  #da4471 20%, transparent 20%), radial-gradient(circle,  $s-blue 20%, transparent 20%), radial-gradient(circle,  $s-blue 20%, transparent 20%);
+    background-image: radial-gradient(circle,  $ss-blue 20%, transparent 20%), radial-gradient(circle,  $ss-purple 20%, transparent 20%), radial-gradient(circle, transparent 10%,  $ss-blue 15%, transparent 20%), radial-gradient(circle,  $ss-blue 20%, transparent 20%), radial-gradient(circle,  $ss-purple 20%, transparent 20%), radial-gradient(circle,  $ss-blue 20%, transparent 20%), radial-gradient(circle,  $ss-blue 20%, transparent 20%);
     background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
   }
 
   .confetti-button:active {
     transform: scale(0.9);
-    background-color: $s-blue;
+    background-color: $ss-blue;
   }
 
   .confetti-button.animate:before {
