@@ -1,8 +1,11 @@
 
 .stats-top-container {
   width: 95%;
-  margin: 0 auto;
+  margin-left: 15px;
   display: flex;
+   img {
+    height: 300px;
+   }
 }
 
 .stats-left-top-container {
@@ -10,26 +13,32 @@
   margin-right: 5%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  padding: 5% 0;
 }
 
 .stats-container {
-  background-color: blue;
+  background-color: white;
   width: 100%;
   border-radius: 20px;
   padding: 20px;
+  margin-bottom: 30px;
+}
+.coach-container {
+  display: flex;
+  align-items: baseline;
+  position: relative;
 }
 
 
 // Coaching
 
 .coach-text-bubble {
-  background-color: yellow;
-  position: relative;
-  left: 50%;
+  background-color: white;
+  position: absolute;
   padding: 20px;
   border-radius: 20px;
+  width: 250px;
+  right: -95%;
+  z-index: 2;
 }
 
 .coach-avatar {
@@ -41,12 +50,12 @@
 // Goal details
 
 .goal-details-container {
-  height: 50%;
+  height: 380px;
   width: 95%;
-  margin: 0 auto;
-  background-color: green;
+  margin: 0 15px;
+  background-color: white;
   border-radius: 20px;
-  padding: 20px;
+  padding: 50px;
   display: flex;
 }
 
@@ -55,7 +64,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
   ul {
     margin: 0;
     padding: 0;
@@ -70,9 +78,17 @@
 }
 
 .goal-details-statusgraph {
-  width: 50%;
+  height: 80%;
 }
 
+.stats-container p {
+  margin-bottom: 0;
+}
 
-
-
+.stats-container,
+.goal-details-container {
+  span {
+    color: $ss-blue;
+    font-size: 35px;
+  }
+}
