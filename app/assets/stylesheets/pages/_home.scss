@@ -48,7 +48,6 @@ h1 {
   margin-right: 60px;
 }
 
-
 .categories-dashboard {
   // background-color: $s-champ;
   width: 500px;
@@ -71,19 +70,19 @@ a, a:hover {
   .nav-link {
     color: $ss-grey;
     display: flex;
-    padding-left: 80px;
     padding-top: 20px;
     &.active {
       color: $ss-blue;
       background-color: transparent;
+      font-weight: bold;
     }
     &:hover {
       color: $ss-blue;
     }
-    img {
-      margin-right: 15px;
-      margin-bottom: 10px;
-    }
+    // img {
+    //   margin-right: 15px;
+    //   margin-bottom: 10px;
+    // }
   }
 }
 

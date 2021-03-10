@@ -1,6 +1,6 @@
 #Rectangle {
   margin: 100px 10px;
-  background-color: #ff5a5a;
+  background-color: $ss-purple;
   width: 20px;
   height: 20px;
   position: relative;
@@ -10,7 +10,7 @@
   position: absolute;
   transform-origin: 0% 100%;
   text-align: center;
-  background-color: $s-orange;
+  background-color: $ss-purple;
   color: white;
   border-radius: 10px;
   width: 160px;
@@ -31,7 +31,7 @@
   left: 5px;
   border-style: solid;
   border-width: 15px;
-  border-color: $s-orange transparent transparent $s-orange;
+  border-color: $ss-purple transparent transparent $ss-purple;
   transform: rotate(10deg);
 }
 
