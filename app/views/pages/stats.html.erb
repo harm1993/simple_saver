@@ -26,8 +26,10 @@
       <%= image_tag "reckless_spender.png"%>
     <% elsif current_user.spending_type == "responsible-spender" %>
       <%= image_tag "responsible-spender.png"%>
-    <% else %>
+    <% elsif current_user.spending_type == "super-saver" %>
       <%= image_tag "super_saver.png"%>
+    <% else %>
+      <%= image_tag "responsible-spender.png"%>
     <% end %>
    </div>
 </div>
@@ -37,11 +39,30 @@
 <div class="goal-details-container">
 
   <div class="goal-details-text">
-    <h3> of </h3>
+    <h3><%= current_user.percentage_goal %>% of <%= current_user.current_goal.name.capitalize %> </h3>
+    <ul>
+      <li>Created at: <%= current_user.current_goal.created_at.strftime("%d-%m-%Y") %></li>
+      <li>Deadline: <%= current_user.current_goal.deadline %></li>
+      <li>Status: <%= current_user.current_goal.completed %></li>
+    </ul>
+
+    <div class="icons-container">
+      <%= link_to edit_goal_path(current_user.current_goal) do %>
+        <%= image_tag "edit.svg", alt: "add button", style: 'height:25px;' %>
+      <% end %>
+      <%= link_to goal_path(current_user.current_goal), method: :delete do %>
+        <%= image_tag "trash.svg", alt: "add button", style: 'height:23px; margin-top: 2px;' %>
+      <% end %>
+    </div>
+
   </div>
 
   <div class="goal-details-statusgraph">
-
+    <% if current_user.current_goal %>
+      <div class="state-bar" data-type="circle" data-percentage="<%= current_user.current_goal.percentage %>"></div>
+    <% else %>
+      <p> <%= link_to "Add goal", new_goal_path, class: "s-button" %> </p>
+    <% end %>
   </div>
 
 </div>

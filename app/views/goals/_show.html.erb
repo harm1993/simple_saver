@@ -1,9 +1,9 @@
-<h2><%= (goal.percentage * 100).round %>% of <%= goal.name %></h2>
+
+<h2><%= current_user.current_goal.name %></h2>
+
 <div class="d-flex justify-content-between">
-  <p>
-    <%= goal.saved %> / <%= goal.amount %>
-  </p>
   <%# <p> just to try the css
   has to be changed with > goal.percentage < %>
+  <div class="state-bar" data-type="circle" data-percentage="<%= goal.percentage %>"></div>
 </div>
-<div class="state-bar" data-type="circle" data-percentage="<%= goal.percentage %>"></div>
+
