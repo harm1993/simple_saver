@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :expenses, only: [ :edit, :update, :destroy ]
   resources :goals
   get '/introduction', to: 'pages#intro'
+  get '/statistics', to: 'pages#stats'
 
   require "sidekiq/web"
   authenticate :user, ->(user) { user.admin? } do

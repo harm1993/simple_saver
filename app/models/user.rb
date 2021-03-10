@@ -51,16 +51,27 @@ class User < ApplicationRecord
     (Date.today.day.to_f / amount_of_days * 100).round(1)
   end
 
-  def spending_pattern
+  def spending_type
     spenditure_status = days_month_passed - overall_progress
 
-    # if spenditure_status < -10.0
-    #   "oefff watch your spending"
-    # elsif spenditure_status > 10
-    #   "You're doing great. Keep this up and your goal will be reached in no time."
-    # else
-    #   "You're on track"
-    # end
+    if spenditure_status < -10.0
+      "reckless-spender"
+    elsif spenditure_status > 10
+      "super-saver"
+    else
+      "responsible-spender"
+    end
+  end
+
+  def spending_coach_text
+    case spending_type
+    when "reckless-spender"
+      "Wow, slow it down m8"
+    when "responsible-spender"
+      "You're on the right track!"
+    when "super-saver"
+      "Wow, amazing this way your goal is reached super fast"
+    end
   end
 
   #  validates :first_name, presence: true
