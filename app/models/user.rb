@@ -71,8 +71,17 @@ class User < ApplicationRecord
       "You're on the right track!"
     when "super-saver"
       "Wow, amazing this way your goal is reached super fast"
+    else
+      "There are no categories yet."
     end
   end
+
+  # Statistics page
+
+  def percentage_goal
+    (current_goal.saved.to_f / current_goal.amount * 100).round(1)
+  end
+
 
   #  validates :first_name, presence: true
   #  validates :date_of_birth, presence: true
