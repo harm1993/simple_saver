@@ -64,14 +64,29 @@ a, a:hover {
   width: 350px;
   .nav-link {
     color: $ss-grey;
+    display: flex;
+    padding-left: 80px;
+    padding-top: 20px;
     &.active {
       color: $ss-blue;
       background-color: transparent;
     }
+    &:hover {
+      color: $ss-blue;
+    }
     img {
-      margin-right: 10px;
+      margin-right: 15px;
+      margin-bottom: 10px;
     }
   }
+}
+
+.nav {
+  margin-top: 70px;
+  margin-left: 10px;
+    h3 {
+      font-size: 20px;
+    }
 }
 
 .dashboard-content {
@@ -94,3 +109,4 @@ a, a:hover {
   filter: drop-shadow(10px 6px 4px lightgrey);
   -webkit-filter: drop-shadow(10px 6px 4px lightgrey);
 }
+
