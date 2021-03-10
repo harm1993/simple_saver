@@ -28,12 +28,10 @@
 }
 
 .dashboard-container {
-  width: 80%;
+  width: 100vw;
   margin: 0 auto;
-  height: 60%;
+  height: 100vh;
   display: flex;
-  justify-content: center;
-  align-items: flex-start !important;
 }
 
 .goals-dashboard {
@@ -62,3 +60,37 @@ a, a:hover {
   text-decoration: none;
 }
 
+.sidebar {
+  width: 350px;
+  .nav-link {
+    color: $ss-grey;
+    &.active {
+      color: $ss-blue;
+      background-color: transparent;
+    }
+    img {
+      margin-right: 10px;
+    }
+  }
+}
+
+.dashboard-content {
+  flex-grow: 1;
+  background: $light-blue;
+  margin: 25px 250px 25px 0px;
+  border-radius: 40px;
+  padding: 40px;
+}
+
+#saving-chart .state-bar {
+  height: 250px;
+}
+
+#logo-dashboard {
+  margin-top: 25px;
+}
+
+.img-shadow {
+  filter: drop-shadow(10px 6px 4px lightgrey);
+  -webkit-filter: drop-shadow(10px 6px 4px lightgrey);
+}

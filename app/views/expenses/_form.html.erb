@@ -1,9 +1,8 @@
 <div class="form-container">
-  <%= simple_form_for([@category, @expense]) do |f| %>
+  <%= simple_form_for([category, expense], remote: true) do |f| %>
     <%= f.input :amount %>
     <%= f.input :place %>
     <%= f.input :date %>
-    <%= f.submit class: "s-button"%>
+    <%= f.button :submit, "Save my expense", class: "s-button"%>
   <% end %>
 </div>
-
