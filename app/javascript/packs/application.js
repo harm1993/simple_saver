@@ -31,8 +31,8 @@ import "bootstrap";
 import { initProgressBar } from '../plugins/init_progress_bar';
 import { initSpeechBubble } from '../plugins/init_speech_bubble';
 import { initScrollBar } from '../plugins/init_scroll_bar';
-import { initConfettiButton } from '../plugins/init_confetti_button'
-import { initAutoType } from '../plugins/init_auto_type'
+import { initConfettiButton } from '../plugins/init_confetti_button';
+import { initAutoType } from '../plugins/init_auto_type';
 
 
 document.addEventListener('turbolinks:load', () => {
