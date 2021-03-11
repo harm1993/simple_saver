@@ -1,0 +1,7 @@
+# config/meta.yml
+
+meta_product_name: "SimpleSaver"
+meta_title: "SimpleSaver - Reach your most daring financial goals"
+meta_description: "A personal finance coach that keeps your spending in check!"
+meta_image: "cover.png" # should exist in `app/assets/images/`
+twitter_account: "@product_twitter_account"   # required for Twitter Cards
