@@ -6,9 +6,9 @@
       <%= f.error_notification %>
 
       <div class="form-inputs pt-2">
-      
+
       <%# from here %>
-        <%= f.input :avatar,
+        <!-- <%#= f.input :avatar, -->
             as: :radio_buttons,
             collection_wrapper_tag: 'div',
             collection_wrapper_class: 'category-wrapper',
@@ -18,7 +18,7 @@
       <%# to here %>
 
         <%= f.input :email, required: true, autofocus: true %>
-    
+
         <div class="d-flex justify-content-between">
           <%= f.input :first_name, required: false, input_html: { autocomplete: current_user.first_name },
                       wrapper_html: { class: "flex-grow-1 pr-1" } %>
@@ -39,7 +39,7 @@
                     required: true,
                     input_html: { autocomplete: "current-password" } %>
       </div>
-    
+
       <div class="form-actions">
         <%= f.button :submit, "Update", class: "s-button" %>
       </div>
