@@ -7,11 +7,11 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body">     
+      <div class="modal-body">
         <div class="expenses">
           <div class="exp-container d-flex justify-content-around">
             <div class="exp-details px-4 mt-3">
-              <% category.expenses.each do |expense| %>
+              <% category&.expenses.each do |expense| %>
                 <div class="d-flex justify-content-between snap-target">
                   <p class="medium"><strong><%= expense.place.capitalize %></strong></p>
                   <p class="medium"><strong>-<%= expense.amount.to_i %>€</strong></p>
