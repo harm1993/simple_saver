@@ -26,7 +26,7 @@
                 <% if @current_goal %>
                   <%= render '/goals/show', goal: @current_goal %>
                 <% else %>
-                  <p> <%= link_to "Add goal", new_goal_path, class: "s-button" %> </p>
+                  <a href="#" data-toggle="modal" data-target="#goalModal-new">Set your goal!</a>
                 <% end %>
               </div>
             </div>
