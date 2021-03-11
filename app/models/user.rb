@@ -68,13 +68,13 @@ class User < ApplicationRecord
   def spending_coach_text
     case spending_type
     when "reckless-spender"
-      "Wow, slow it down m8"
+      "Wow, slow down your spending!"
     when "responsible-spender"
       "You're on the right track!"
     when "super-saver"
-      "Wow, amazing this way your goal is reached super fast"
+      "Wow amazing, this way your goal is reached in no time!"
     when "no categories"
-      "There are no categories yet."
+      "There are no categories yet. Add some in the overview page."
     end
   end
 

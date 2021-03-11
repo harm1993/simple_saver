@@ -37,7 +37,7 @@ class GoalsController < ApplicationController
   def update
     @goal = Goal.find(params[:id])
     @goal.update(goal_params)
-    redirect_to goal_path, notice: 'Goal was successfully updated!'
+    redirect_to root_path, notice: 'Goal was successfully updated!'
   end
 
   # destroy
@@ -45,7 +45,7 @@ class GoalsController < ApplicationController
   def destroy
     @goal = Goal.find(params[:id])
     @goal.destroy
-    redirect_to goals_path
+    redirect_to root_path, notice: 'Goal was successfully deleted!'
   end
 
   private
