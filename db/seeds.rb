@@ -27,28 +27,28 @@ puts 'creating categories and expenses...'
 category_params.each do |param|
   category = Category.create!(user: francesca, goal_per_month: (50..100).to_a.sample, **param)
   5.times do |index|
-    Expense.create(amount: (2..10).to_a.sample, category: category)
+    Expense.create(place: 'Albert Heijn', amount: (2..10).to_a.sample, category: category)
   end
 end
 
 category_params.each do |param|
   category = Category.create!(user: harm, goal_per_month: (50..100).to_a.sample, **param)
   5.times do |index|
-    Expense.create(amount: (2..10).to_a.sample, category: category)
+    Expense.create(place: 'Albert Heijn', amount: (2..10).to_a.sample, category: category)
   end
 end
 
 category_params.each do |param|
   category = Category.create!(user: thomas, goal_per_month: (50..100).to_a.sample, **param)
   5.times do |index|
-    Expense.create(amount: (2..10).to_a.sample, category: category)
+    Expense.create(place: 'Albert Heijn', amount: (2..10).to_a.sample, category: category)
   end
 end
 
 category_params.each do |param|
   category = Category.create!(user: fabrizio, goal_per_month: (50..100).to_a.sample, **param)
   5.times do |index|
-    Expense.create(amount: (2..10).to_a.sample, category: category)
+    Expense.create(place: 'Albert Heijn', amount: (2..10).to_a.sample, category: category)
   end
 end
 

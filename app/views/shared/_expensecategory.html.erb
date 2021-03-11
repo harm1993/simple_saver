@@ -5,27 +5,27 @@
 
       <div class="layout-container">
         <div class="category-logo-container">
-        <a href="#" data-toggle="modal" data-target="#expenseModal-index-<%= category.id %>">
-          <% if category.name == "Meals" %>
-          <%= image_tag "lunch.svg", style: 'height:40px;'%>
-          <% elsif category.name == "Coffee" %>
-          <%= image_tag "coffee-cup.svg", style: 'height:40px;'%>
-          <% elsif category.name == "Cigarettes" %>
-          <%= image_tag "cigarette.svg", style: 'height:40px;'%>
-          <% elsif category.name == "Delivery" %>
-          <%= image_tag "pizza.svg", style: 'height:40px;'%>
-          <% elsif category.name == "Other" %>
-          <%= image_tag "debit-card.svg", style: 'height:40px;'%>
-          <% elsif category.name == "Shopping" %>
-          <%= image_tag "online-shopping.svg", style: 'height:40px;'%>
-          <% end  %>    
-        </a>
+          <a href="#" data-toggle="modal" data-target="#expenseModal-index-<%= category.id %>">
+            <% if category.name.capitalize == "Meals" %>
+              <%= image_tag "lunch.png", style: 'height:40px;'%>
+            <% elsif category.name.capitalize == "Coffee" %>
+              <%= image_tag "coffee-cup.png", style: 'height:40px;'%>
+            <% elsif category.name.capitalize == "Cigarettes" %>
+              <%= image_tag "cigarette.png", style: 'height:40px;'%>
+            <% elsif category.name.capitalize == "Delivery" %>
+              <%= image_tag "pizza.png", style: 'height:40px;'%>
+            <% elsif category.name.capitalize == "Other" %>
+              <%= image_tag "debit-card.png", style: 'height:40px;'%>
+            <% elsif category.name.capitalize == "Shopping" %>
+              <%= image_tag "online-shopping.png", style: 'height:40px;'%>
+            <% end  %>    
+          </a>
         </div>
       
         <div class="exp-cat-card-mid">
         <a href="#" data-toggle="modal" data-target="#expenseModal-index-<%= category.id %>">
           <div class="text-x-progressbar">
-            <p><%= category.name.capitalize %> 🛈</p>
+            <p><%= category.name.capitalize %> <i class="fas fa-info-circle fa-xs"></i></p>
             <p> <%= (category.spent_percentage * 100) < 100 ? (category.spent_percentage * 100).to_i : 100  %>% </p>
           </div>
           <div class="state-bar" data-type="line" data-percentage="<%= category.spent_percentage %>"></div>

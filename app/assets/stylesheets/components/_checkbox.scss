@@ -34,14 +34,13 @@
 .category-selector:checked + label {
   background-color: $ss-purple !important;
   color: white !important;
-
 }
 
 
 
 #category_name_coffee + label {
   // color: #FD1015;
-  background-image: url("coffee-cup.svg");
+  background-image: url("coffee-cup.png");
   background-repeat: no-repeat;
   background-size: 50px;
 }
@@ -55,7 +54,7 @@
 
 #category_name_meals + label {
   // color: #FFC65A;
-  background-image: url("lunch.svg");
+  background-image: url("lunch.png");
   background-repeat: no-repeat;
   background-size: 50px;
 }
@@ -68,7 +67,7 @@
 
 #category_name_cigarettes + label {
   // color: #62DDF5;
-  background-image: url("cigarette.svg");
+  background-image: url("cigarette.png");
   background-repeat: no-repeat;
   background-size: 50px;
   // background-position: right 10px top 20px;
@@ -81,7 +80,7 @@
 
 #category_name_shopping + label {
   // color: #62DDF5;
-  background-image: url("online-shopping.svg");
+  background-image: url("online-shopping.png");
   background-size: 50px;
   background-repeat: no-repeat;
 }
@@ -93,7 +92,7 @@
 
 #category_name_delivery + label {
   // color: #62DDF5;
-  background-image: url("pizza.svg");
+  background-image: url("pizza.png");
   background-repeat: no-repeat;
   background-size: 50px;
 }
@@ -106,7 +105,7 @@
 #category_name_other + label {
   // color: #62DDF5;
   background-repeat: no-repeat;
-  background-image: url("debit-card.svg");
+  background-image: url("debit-card.png");
   background-size: 50px;
 }
 
@@ -116,3 +115,65 @@
 }
 
 
+// RADIOBUTTONS FOR USER AVATAR //
+
+.account-page .category-selector + label {
+  border: none;
+}
+
+.account-page .category-selector:checked + label {
+  background-color: #FFF !important;
+  color: #FFF !important;
+  border: 2px solid $ss-purple;
+}
+
+.category-selector-avatar {
+  background: #FFF;
+  border: none;
+}
+
+#user_avatar_1 + label {
+  background-repeat: no-repeat;
+  background-image: url("avatar-1.png");
+  background-size: 70%;
+  background-position: center;
+}
+
+#user_avatar_2 + label {
+  background-repeat: no-repeat;
+  background-image: url("avatar-2.png");
+  background-size: 70%;
+  background-position: center;
+}
+
+#user_avatar_3 + label {
+  background-repeat: no-repeat;
+  background-image: url("avatar-3.png");
+  background-size: 70%;
+  background-position: center;
+}
+
+#user_avatar_4 + label {
+  background-repeat: no-repeat;
+  background-image: url("avatar-4.png");
+  background-size: 70%;
+  background-position: center;
+}
+
+#user_avatar_5 + label {
+  background-repeat: no-repeat;
+  background-image: url("avatar-5.png");
+  background-size: 70%;
+  background-position: center;
+}
+
+#user_avatar_6 + label {
+  background-repeat: no-repeat;
+  background-image: url("avatar-2.png");
+  background-size: 70%;
+  background-position: center;
+}
+
+.was-validated .form-check-input:valid ~ .form-check-label, .form-check-input.is-valid ~ .form-check-label {
+  color: #FFF;
+}
