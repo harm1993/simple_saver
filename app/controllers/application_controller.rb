@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
 
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:account_update) { |u| u.permit(:first_name, :last_name, :avatar, :email, :password, :current_password)}
+  end
   # app/controllers/application_controller.rb
 
   def default_url_options
