@@ -87,8 +87,10 @@ a, a:hover {
 }
 
 .nav {
-  margin-top: 70px;
-  margin-left: 10px;
+  justify-content: center !important;
+  align-items: left;
+  margin-top: 50px;
+  margin-left: 50px;
     h3 {
       font-size: 20px;
     }
