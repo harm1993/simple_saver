@@ -8,6 +8,8 @@ class User < ApplicationRecord
   has_many :goals
   has_many :expenses, through: :categories
 
+  AVATARS = [1, 2, 3, 4, 5, 6]
+
   def current_goal
     goals.find_by(completed: false)
   end
@@ -84,28 +86,5 @@ class User < ApplicationRecord
     (current_goal.saved.to_f / current_goal.amount * 100).round(1)
   end
 
-
   #  validates :first_name, presence: true
-  #  validates :date_of_birth, presence: true
 end
-
-# TODO #
-
-# #Overall progress
-#   > average of percentages of all categories
-#     (per month)
-#
-#   categories = current_user.categories
-#   percentages [] =
-#   > categories.each > category.spent_percentage > push to array
-#   > percentages.sum / percentages.count
-
-
-# #Saving potential
-#   > sum of the unspended amount from all categories
-#     (per month)
-#
-#   categories = current_user.categories
-#   unspent [] =
-#   > categories.each > category.goal_per_month - category.tot_month > push to array
-#   > unspended.sum

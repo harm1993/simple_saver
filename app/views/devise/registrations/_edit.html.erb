@@ -4,8 +4,19 @@
   <div class="form-container">
     <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
       <%= f.error_notification %>
-    
+
       <div class="form-inputs pt-2">
+      
+      <%# from here %>
+        <%= f.input :avatar,
+            as: :radio_buttons,
+            collection_wrapper_tag: 'div',
+            collection_wrapper_class: 'category-wrapper',
+            item_wrapper_class: 'category-item',
+            input_html: {class: 'category-selector'},
+            collection: User::AVATARS %>
+      <%# to here %>
+
         <%= f.input :email, required: true, autofocus: true %>
     
         <div class="d-flex justify-content-between">
