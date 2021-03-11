@@ -1,8 +1,8 @@
 import { MiniBar } from "minibarjs";
 
 const initScrollBar = () => {
-  if (document.querySelector('.exp-container')) {
-    new MiniBar('.exp-container', {
+  document.querySelectorAll('.exp-container').forEach((container) => {
+    new MiniBar(container, {
       // or progress
       barType: "default",
       // min size
@@ -13,7 +13,7 @@ const initScrollBar = () => {
       scrollX: true,
       scrollY: true,
       // shows nav buttons
-      navButtons: true,
+      navButtons: false,
       // scroll amount in pixels
       scrollAmount: 10,
       // MutationObserver API
@@ -21,32 +21,9 @@ const initScrollBar = () => {
         attributes: false,
         childList: true,
         subtree: true
-      },
-      // default classes
-      classes: {
-        container: "mb-container",
-        content: "mb-content",
-        track: "mb-track",
-        bar: "mb-bar",
-        visible: "mb-visible",
-        progress: "mb-progress",
-        hover: "mb-hover",
-        scrolling: "mb-scrolling",
-        textarea: "mb-textarea",
-        wrapper: "mb-wrapper",
-        nav: "mb-nav",
-        btn: "mb-button",
-        btns: "mb-buttons",
-        increase: "mb-increase",
-        decrease: "mb-decrease",
-        item: "mb-item",
-        itemVisible: "mb-item-visible",
-        itemPartial: "mb-item-partial",
-        itemHidden: "mb-item-hidden"
       }
-
     });
-  }
+  })
 };
 
 export { initScrollBar }
