@@ -32,7 +32,12 @@ const initProgressBar = () => {
           }
         });
       }
-      bar.animate(container.dataset.percentage);
+
+      if (container.dataset.percentage < 1.0) { 
+        bar.animate(container.dataset.percentage)
+      } else {
+        bar.animate(1.0)
+      }
     }
   })
 }

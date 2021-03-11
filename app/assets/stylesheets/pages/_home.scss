@@ -87,8 +87,10 @@ a, a:hover {
 }
 
 .nav {
-  margin-top: 70px;
-  margin-left: 10px;
+  justify-content: center !important;
+  align-items: left;
+  margin-top: 50px;
+  margin-left: 50px;
     h3 {
       font-size: 20px;
     }
@@ -97,7 +99,7 @@ a, a:hover {
 .dashboard-content {
   flex-grow: 1;
   background: $light-blue;
-  margin: 25px 250px 25px 0px;
+  margin: 25px 5% 25px 0px;
   border-radius: 40px;
   padding: 40px;
   width: 80vw;
@@ -109,7 +111,7 @@ a, a:hover {
 }
 
 #logo-dashboard {
-  margin-top: 25px;
+  margin-top: 20px;
 }
 
 .img-shadow {

@@ -37,13 +37,16 @@
   padding: 20px;
   border-radius: 20px;
   width: 250px;
-  right: -95%;
+  left: 70%;
   z-index: 2;
 }
 
 .coach-avatar {
   position: relative;
   bottom: 10%;
+  .spender {
+    height: 350px;
+  }
 }
 
 
