@@ -3,10 +3,10 @@
 
   <div class="card-framework">
 
-    <div class="layout-container">
-
-      <div class="category-logo-container">
-         <% if category.name == "Meals" %>
+      <div class="layout-container">
+        <div class="category-logo-container">
+        <a href="#" data-toggle="modal" data-target="#expenseModal-index-<%= category.id %>">
+          <% if category.name == "Meals" %>
           <%= image_tag "lunch.svg", style: 'height:40px;'%>
           <% elsif category.name == "Coffee" %>
           <%= image_tag "coffee-cup.svg", style: 'height:40px;'%>
@@ -18,19 +18,20 @@
           <%= image_tag "debit-card.svg", style: 'height:40px;'%>
           <% elsif category.name == "Shopping" %>
           <%= image_tag "online-shopping.svg", style: 'height:40px;'%>
-          <% end  %>
-
-<!--       <div class="category-logo-container" style="background-image:url(<%#= asset_path category.name.downcase %>)"> -->
-
-      </div>
-      <div class="exp-cat-card-mid">
-        <div class="text-x-progressbar">
-          <a href="#" data-toggle="modal" data-target="#expenseModal-index-<%= category.id %>"><p><%= category.name.capitalize %> 🛈</p></a>
-          <p><%= (category.spent_percentage * 100).to_i %>%</p>
+          <% end  %>    
+        </a>
         </div>
-        <div class="state-bar" data-type="line" data-percentage="<%= category.spent_percentage %>"></div>
+      
+        <div class="exp-cat-card-mid">
+        <a href="#" data-toggle="modal" data-target="#expenseModal-index-<%= category.id %>">
+          <div class="text-x-progressbar">
+            <p><%= category.name.capitalize %> 🛈</p>
+            <p> <%= (category.spent_percentage * 100) < 100 ? (category.spent_percentage * 100).to_i : 100  %>% </p>
+          </div>
+          <div class="state-bar" data-type="line" data-percentage="<%= category.spent_percentage %>"></div>
+        </a> 
+        </div>
       </div>
-    </div>
 
     <div class="icons-container">
 
@@ -52,3 +53,7 @@
      <%= render '/expenses/modal_index', category: category %>
   </div>
  <hr>
+
+<%# <%# 
+Old icons category logic
+<%# <div class="category-logo-container" style="background-image:url(= asset_path category.name.downcase %><%# )">  %>
