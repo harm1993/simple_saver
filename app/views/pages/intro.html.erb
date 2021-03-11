@@ -2,7 +2,7 @@
   <div class="d-flex justify-content-between">
     <div class="text-left half-screen">
       <h1 class="logo font-weight-bold">SimpleSaver</h1><br>
-      <p>A simple digital framework that tracks your spending per category and rewards you when you reached your saving goals.</p> 
+      <p>A simple digital framework that tracks your spending per category and rewards you when you reached your saving goals.</p>
       <p>Are you ready to reach your most daring financial goals?</p>
     </div>
     <%= image_tag "intro-screen.png", height: "350px" %>
@@ -60,6 +60,9 @@
     </div>
     <%= image_tag "intro-party.png", height: "200px", class: "half-screen img-right img-shadow" %>
   </div>
-
-  <%= link_to "Start saving!", new_user_session_path, class: "start_saving s-button confetti-button img-shadow" %>
+    <href type="button" data-toggle="modal" data-target="#loginModal-<%=current_user%>" class= "start_saving s-button confetti-button img-shadow">Start saving!
+    </href>
 </div>
+
+<%= render 'pages/modal_login' %>
+
