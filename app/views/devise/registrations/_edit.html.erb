@@ -7,14 +7,6 @@
 
       <div class="form-inputs pt-2">
 
-        <%= f.input :avatar,
-            as: :radio_buttons,
-            collection_wrapper_tag: 'div',
-            collection_wrapper_class: 'category-wrapper',
-            item_wrapper_class: 'category-item',
-            input_html: {class: 'category-selector'},
-            collection: User::AVATARS %>
-
         <%= f.input :email, required: true, autofocus: true %>
 
         <div class="d-flex justify-content-between">
