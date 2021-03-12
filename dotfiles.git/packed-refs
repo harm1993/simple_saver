@@ -1,0 +1,6 @@
+# pack-refs with: peeled fully-peeled sorted 
+f61c1fd774f957c3aa47fe23612a922079b13683 refs/heads/fix-color-highlight-package
+6d8c56a0bba9fe97bebb4f32163cae99805ed79c refs/heads/git-editor
+9e2410537c99ea77a4a7eb641d6719948bb04962 refs/heads/master
+6fe767fac7a44e5923ee4d2ce112d4ae1bd601c5 refs/heads/show-virtualenv
+62ff172d0c9d5119cd9d3730884f464e2b520672 refs/heads/update-nvm-load
