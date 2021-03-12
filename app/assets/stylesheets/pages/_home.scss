@@ -68,6 +68,7 @@ a, a:hover {
 .sidebar {
   width: 350px;
   .nav-link {
+    align-items: center;
     color: $ss-grey;
     display: flex;
     padding-top: 20px;
