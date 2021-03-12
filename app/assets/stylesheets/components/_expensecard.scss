@@ -1,13 +1,10 @@
 .exp-details {
   margin: 10px 0px 10px 0px;
-  width: 30vw;
+  width: 100%;
 }
 
 .expenses {
   height: 70vh;
-  scroll-snap-type: y mandatory;
-  overflow: scroll;
-  overflow-y: scroll;
 }
 
 .expenses::-webkit-scrollbar-track {
